@@ -34,7 +34,7 @@ public class NumberStream {
      * generate pythagorean triple
      * @param start start bound
      * @param end   end bound
-     * @return pythagorean triple
+     * @return pythagorean triples
      */
     public static List<Triplet<Integer, Integer, Integer>> pythagoreanTriple1(int start, int end) {
         return IntStream.rangeClosed(start, end)
@@ -51,7 +51,7 @@ public class NumberStream {
      * generate pythagorean triple
      * @param start start bound
      * @param end   end bound
-     * @return pythagorean triple
+     * @return pythagorean triples
      */
     public static List<Triplet<Integer, Integer, Integer>> pythagoreanTriple2(int start, int end) {
         return IntStream.rangeClosed(start, end)
