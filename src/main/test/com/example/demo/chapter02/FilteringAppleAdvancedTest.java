@@ -26,7 +26,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void filterHeavyApples() {
-        var apples = FilteringApple.filterApples(inventory,
+        var apples = FilteringAppleAdvanced.filterApples(inventory,
                 (Apple apple) -> apple.weight() > 150);
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -37,7 +37,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void filterGreenApples() {
-        var apples = FilteringApple.filterApples(inventory,
+        var apples = FilteringAppleAdvanced.filterApples(inventory,
                 (Apple apple) -> Color.GREEN.equals(apple.color()));
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -48,7 +48,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void filterRedApples() {
-        var apples = FilteringApple.filterApples(inventory,
+        var apples = FilteringAppleAdvanced.filterApples(inventory,
                 (Apple apple) -> Color.RED.equals(apple.color()));
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -59,13 +59,13 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void filterRedAndHeavyApples() {
-        var apples = FilteringApple.filterApples(inventory,
+        var apples = FilteringAppleAdvanced.filterApples(inventory,
                 (Apple apple) -> Color.RED.equals(apple.color()) && apple.weight() > 150);
         assertNotNull(apples);
         assertEquals(0, apples.size());
         // apples.forEach(apple -> {
-        //     assertEquals(Color.RED, apple.getColor());
-        //     assertTrue(apple.getWeight() > 150);
+        //     assertEquals(Color.RED, apple.color());
+        //     assertTrue(apple.weight() > 150);
         // });
 
         log.info("Red and heavy apples: {}", apples);
