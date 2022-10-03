@@ -17,14 +17,14 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 8. Collection API enhancements
 - Chapter 9. Refactoring(testing(and debugging
 - Chapter 10. Domain-specific languages using lambdas
-- Chapter 11. Using Optional as a better alternative to nullchapter11))
+- Chapter 11. Using Optional as a better alternative to null
 - Chapter 12. New Date and Time API
 - Chapter 13. Default methods
 - Chapter 14. The Java Module System
-- Chapter 15. Concepts behind CompletableFuture and reactive programmingexample/demo/chapter15))
-- Chapter 16. CompletableFuture: composable asynchronous programmingdemo/chapter16))
+- Chapter 15. Concepts behind CompletableFuture and reactive programming
+- Chapter 16. CompletableFuture: composable asynchronous programming
 - Chapter 17. Reactive programming
 - Chapter 18. Thinking functionally
 - Chapter 19. Functional programming techniques
-- Chapter 20. Blending OOP and FP: Comparing Java and Scalachapter20))
+- Chapter 20. Blending OOP and FP: Comparing Java and Scala
 - Chapter 21. Conclusions and where next for Java
