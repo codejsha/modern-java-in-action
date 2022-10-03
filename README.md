@@ -1,0 +1,14 @@
+# Modern Java in Action
+
+This repository contains the code examples from the book [Modern Java in Action](https://www.manning.com/books/modern-java-in-action), published by Manning Publications. All source codes have been rewritten from the original sources(https://github.com/java-manning/modern-java) in the book.
+
+## Table of Contents
+
+- Chapter 1. Java 8, 9, 10, and 11: what's happening? | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter01)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter01))
+- Chapter 2. Passing code with behavior parameterization | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter02)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter02))
+- Chapter 3. Lambda expressions | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter03)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter03))
+- Chapter 4. Introducing streams | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter04)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter04))
+- Chapter 5. Working with streams | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter05)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter05))
+
+(work in progress)
+ 
