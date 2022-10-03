@@ -1,12 +1,11 @@
 package com.example.demo.chapter05;
 
-import com.example.demo.enumeration.DishType;
+import com.example.demo.data.DishTestData;
 import com.example.demo.record.Dish;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,13 +16,7 @@ class MappingSpecialMenuTest {
 
     @BeforeEach
     void setUp() {
-        menu = Arrays.asList(
-                new Dish("season fruit", true, 120, DishType.OTHER),
-                new Dish("prawns", false, 300, DishType.FISH),
-                new Dish("rice", true, 350, DishType.OTHER),
-                new Dish("chicken", false, 400, DishType.MEAT),
-                new Dish("french fries", true, 530, DishType.OTHER)
-        );
+        menu = DishTestData.SPECIAL_DISH_LIST;
     }
 
     @Test

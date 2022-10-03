@@ -5,7 +5,7 @@ import com.example.demo.record.Dish;
 import java.util.Arrays;
 import java.util.List;
 
-public class DishData {
+public class DishTestData {
     public static final List<Dish> DISH_LIST = Arrays.asList(
             new Dish("pork", false, 800, Dish.Type.MEAT),
             new Dish("beef", false, 700, Dish.Type.MEAT),

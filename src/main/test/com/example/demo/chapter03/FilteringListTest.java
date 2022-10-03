@@ -1,5 +1,6 @@
 package com.example.demo.chapter03;
 
+import com.example.demo.data.AppleTestData;
 import com.example.demo.record.Apple;
 import com.example.demo.enumeration.Color;
 import lombok.extern.slf4j.Slf4j;
@@ -17,11 +18,7 @@ class FilteringListTest {
 
     @BeforeEach
     void setUp() {
-        inventory = Arrays.asList(
-                new Apple(80, Color.GREEN),
-                new Apple(155, Color.GREEN),
-                new Apple(120, Color.RED)
-        );
+        inventory = AppleTestData.APPLE_LIST;
     }
 
     @Test

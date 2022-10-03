@@ -1,5 +1,7 @@
 package com.example.demo.chapter05;
 
+import com.example.demo.data.TraderTestData;
+import com.example.demo.data.TransactionTestData;
 import com.example.demo.record.Trader;
 import com.example.demo.record.Transaction;
 import com.google.common.collect.Comparators;
@@ -20,21 +22,8 @@ class PracticeTest {
 
     @BeforeEach
     void setUp() {
-        Trader raoul = new Trader("Raoul", "Cambridge");
-        Trader mario = new Trader("Mario", "Milan");
-        Trader alan = new Trader("Alan", "Cambridge");
-        Trader brian = new Trader("Brian", "Cambridge");
-
-        traders = List.of(raoul, mario, alan, brian);
-
-        transactions = Arrays.asList(
-                new Transaction(brian, 2011, 300),
-                new Transaction(raoul, 2012, 1000),
-                new Transaction(raoul, 2011, 400),
-                new Transaction(mario, 2012, 710),
-                new Transaction(mario, 2012, 700),
-                new Transaction(alan, 2012, 950)
-        );
+        traders = TraderTestData.TRADER_LIST;
+        transactions = TransactionTestData.TRANSACTIONS;
     }
 
     @Test

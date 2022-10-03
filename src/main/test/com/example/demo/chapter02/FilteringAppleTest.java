@@ -4,6 +4,7 @@ import com.example.demo.chapter02.FilteringApple.AppleGreenColorPredicate;
 import com.example.demo.chapter02.FilteringApple.AppleHeavyWeightPredicate;
 import com.example.demo.chapter02.FilteringApple.AppleRedColorAndHeavyWeightPredicate;
 import com.example.demo.chapter02.FilteringApple.AppleRedColorPredicate;
+import com.example.demo.data.AppleTestData;
 import com.example.demo.record.Apple;
 import com.example.demo.enumeration.Color;
 import lombok.extern.slf4j.Slf4j;
@@ -21,11 +22,7 @@ class FilteringAppleTest {
 
     @BeforeEach
     void setUp() {
-        inventory = Arrays.asList(
-                new Apple(80, Color.GREEN),
-                new Apple(155, Color.GREEN),
-                new Apple(120, Color.RED)
-        );
+        inventory = AppleTestData.APPLE_LIST;
     }
 
     @Test
