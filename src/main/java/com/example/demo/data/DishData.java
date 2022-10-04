@@ -3,7 +3,9 @@ package com.example.demo.data;
 import com.example.demo.record.Dish;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DishData {
     public static final List<Dish> DISH_LIST = Arrays.asList(
@@ -25,4 +27,18 @@ public class DishData {
             new Dish("chicken", false, 400, Dish.Type.MEAT),
             new Dish("french fries", true, 530, Dish.Type.OTHER)
     );
+
+    public static final Map<String, List<String>> DISH_TAGS = new HashMap<>() {
+        {
+            put("pork", Arrays.asList("greasy", "salty"));
+            put("beef", Arrays.asList("salty", "roasted"));
+            put("chicken", Arrays.asList("fried", "crisp"));
+            put("french fries", Arrays.asList("greasy", "fried"));
+            put("rice", Arrays.asList("light", "natural"));
+            put("season fruit", Arrays.asList("fresh", "natural"));
+            put("pizza", Arrays.asList("tasty", "salty"));
+            put("prawns", Arrays.asList("tasty", "roasted"));
+            put("salmon", Arrays.asList("delicious", "fresh"));
+        }
+    };
 }
