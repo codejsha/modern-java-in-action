@@ -1,13 +1,12 @@
 package com.example.demo.chapter03;
 
 import com.example.demo.data.AppleTestData;
-import com.example.demo.record.Apple;
 import com.example.demo.enumeration.Color;
+import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;

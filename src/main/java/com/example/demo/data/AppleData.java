@@ -1,7 +1,7 @@
 package com.example.demo.data;
 
-import com.example.demo.record.Apple;
 import com.example.demo.enumeration.Color;
+import com.example.demo.record.Apple;
 
 import java.util.Arrays;
 import java.util.List;

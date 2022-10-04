@@ -1,8 +1,8 @@
 package com.example.demo.chapter01;
 
-import com.example.demo.record.Apple;
-import com.example.demo.enumeration.Color;
 import com.example.demo.data.AppleData;
+import com.example.demo.enumeration.Color;
+import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

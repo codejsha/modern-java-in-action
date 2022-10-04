@@ -84,7 +84,7 @@ public class GroupingMenu {
 
     /**
      * Dish tags grouped by type
-     * @param menu menu list
+     * @param menu     menu list
      * @param dishTags dish tags
      * @return menu grouped by type
      */
