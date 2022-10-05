@@ -7,7 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -65,15 +67,15 @@ class GroupingMenuTest {
         assertNotNull(result);
         // fish
         assertEquals(2, result.get(Dish.Type.FISH).size());
-        assertEquals(new ArrayList<>(Arrays.asList("prawns", "salmon")),
+        assertEquals(List.of("prawns", "salmon"),
                 result.get(Dish.Type.FISH));
         // meat
         assertEquals(3, result.get(Dish.Type.MEAT).size());
-        assertEquals(new ArrayList<>(Arrays.asList("pork", "beef", "chicken")),
+        assertEquals(List.of("pork", "beef", "chicken"),
                 result.get(Dish.Type.MEAT));
         // other
         assertEquals(4, result.get(Dish.Type.OTHER).size());
-        assertEquals(new ArrayList<>(Arrays.asList("french fries", "rice", "season fruit", "pizza")),
+        assertEquals(List.of("french fries", "rice", "season fruit", "pizza"),
                 result.get(Dish.Type.OTHER));
 
         log.info("Dish names grouped by type: {}", result);
@@ -86,15 +88,15 @@ class GroupingMenuTest {
         assertNotNull(result);
         // fish
         assertEquals(4, result.get(Dish.Type.FISH).size());
-        assertEquals(new HashSet<>(Arrays.asList("roasted", "tasty", "fresh", "delicious")),
+        assertEquals(Set.of("roasted", "tasty", "fresh", "delicious"),
                 result.get(Dish.Type.FISH));
         // meat
         assertEquals(5, result.get(Dish.Type.MEAT).size());
-        assertEquals(new HashSet<>(Arrays.asList("salty", "greasy", "roasted", "fried", "crisp")),
+        assertEquals(Set.of("salty", "greasy", "roasted", "fried", "crisp"),
                 result.get(Dish.Type.MEAT));
         // other
         assertEquals(7, result.get(Dish.Type.OTHER).size());
-        assertEquals(new HashSet<>(Arrays.asList("salty", "greasy", "natural", "light", "tasty", "fresh", "fried")),
+        assertEquals(Set.of("salty", "greasy", "natural", "light", "tasty", "fresh", "fried"),
                 result.get(Dish.Type.OTHER));
 
         log.info("Dish tags grouped by type: {}", result);
@@ -187,13 +189,13 @@ class GroupingMenuTest {
 
         assertNotNull(result);
         assertEquals(2, result.get(Dish.Type.FISH).size());
-        assertEquals(new HashSet<>(Arrays.asList(CaloricLevel.DIET, CaloricLevel.NORMAL)),
+        assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL),
                 result.get(Dish.Type.FISH));
         assertEquals(3, result.get(Dish.Type.MEAT).size());
-        assertEquals(new HashSet<>(Arrays.asList(CaloricLevel.DIET, CaloricLevel.NORMAL, CaloricLevel.FAT)),
+        assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL, CaloricLevel.FAT),
                 result.get(Dish.Type.MEAT));
         assertEquals(2, result.get(Dish.Type.OTHER).size());
-        assertEquals(new HashSet<>(Arrays.asList(CaloricLevel.DIET, CaloricLevel.NORMAL)),
+        assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL),
                 result.get(Dish.Type.OTHER));
 
         log.info("Caloric levels by type: {}", result);
@@ -205,13 +207,13 @@ class GroupingMenuTest {
 
         assertNotNull(result);
         assertEquals(2, result.get(Dish.Type.FISH).size());
-        assertEquals(new HashSet<>(Arrays.asList(CaloricLevel.DIET, CaloricLevel.NORMAL)),
+        assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL),
                 result.get(Dish.Type.FISH));
         assertEquals(3, result.get(Dish.Type.MEAT).size());
-        assertEquals(new HashSet<>(Arrays.asList(CaloricLevel.DIET, CaloricLevel.NORMAL, CaloricLevel.FAT)),
+        assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL, CaloricLevel.FAT),
                 result.get(Dish.Type.MEAT));
         assertEquals(2, result.get(Dish.Type.OTHER).size());
-        assertEquals(new HashSet<>(Arrays.asList(CaloricLevel.DIET, CaloricLevel.NORMAL)),
+        assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL),
                 result.get(Dish.Type.OTHER));
 
         log.info("Caloric levels by type: {}", result);
