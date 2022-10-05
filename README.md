@@ -10,10 +10,10 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 4. Introducing streams | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter04)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter04))
 - Chapter 5. Working with streams | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter05)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter05))
 - Chapter 6. Collecting data with streams | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter06)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter06))
+- Chapter 7. Parallel data processing and performance | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter07)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter07))
 
 (work in progress)
 
-- Chapter 7. Parallel data processing and performance
 - Chapter 8. Collection API enhancements
 - Chapter 9. Refactoring(testing(and debugging
 - Chapter 10. Domain-specific languages using lambdas
