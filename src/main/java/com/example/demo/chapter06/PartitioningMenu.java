@@ -14,7 +14,7 @@ import static java.util.stream.Collectors.*;
 @Slf4j
 public class PartitioningMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISH_LIST;
+        var menu = DishData.DISHES;
         var dishTags = DishData.DISH_TAGS;
 
         log.info("Dishes partitioned by vegetarian: {}", PartitioningMenu.partitionByVegetarian(menu));

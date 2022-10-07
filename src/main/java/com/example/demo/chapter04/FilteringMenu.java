@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class FilteringMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISH_LIST;
+        var menu = DishData.DISHES;
 
         // filtering high calorie dishes (limit 3)
         log.info("High calorie dishes: {}", threeHighCalorieDishes(menu));

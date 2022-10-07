@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class Practice {
     public static void main(String[] args) {
         var transactions = TransactionData.TRANSACTIONS;
-        var traders = TraderData.TRADER_LIST;
+        var traders = TraderData.TRADERS;
 
         log.info("exercise1 | all transactions in 2011 and sort by value: {}", exercise1(transactions));
         log.info("exercise2 | unique cities where traders work: {}", exercise2(traders));

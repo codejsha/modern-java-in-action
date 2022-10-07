@@ -9,7 +9,7 @@ import java.util.List;
 @Slf4j
 public class PrimitiveStream {
     public static void main(String[] args) {
-        var menu = DishData.DISH_LIST;
+        var menu = DishData.DISHES;
 
         log.info("Sum of calories: {}", sumOfCalories(menu));
         log.info("Max of calories: {}", maxOfCalories(menu));

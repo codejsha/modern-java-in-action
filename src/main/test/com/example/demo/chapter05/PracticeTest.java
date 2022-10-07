@@ -21,7 +21,7 @@ class PracticeTest {
 
     @BeforeEach
     void setUp() {
-        traders = TraderTestData.TRADER_LIST;
+        traders = TraderTestData.TRADERS;
         transactions = TransactionTestData.TRANSACTIONS;
     }
 

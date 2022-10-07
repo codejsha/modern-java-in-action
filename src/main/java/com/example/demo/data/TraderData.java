@@ -10,5 +10,5 @@ public class TraderData {
     public static final Trader ALAN = new Trader("Alan", "Cambridge");
     public static final Trader BRIAN = new Trader("Brian", "Cambridge");
 
-    public static final List<Trader> TRADER_LIST = List.of(RAOUL, MARIO, ALAN, BRIAN);
+    public static final List<Trader> TRADERS = List.of(RAOUL, MARIO, ALAN, BRIAN);
 }

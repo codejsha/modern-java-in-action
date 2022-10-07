@@ -1,5 +1,7 @@
 # Modern Java in Action
 
+Source code for Modern Java in Action study.
+
 This repository contains the code examples from the book [Modern Java in Action](https://www.manning.com/books/modern-java-in-action), published by Manning Publications. All source codes have been rewritten(modified) from the original source(https://github.com/java-manning/modern-java) in the book.
 
 ## Table of Contents
@@ -15,7 +17,7 @@ This repository contains the code examples from the book [Modern Java in Action]
 (work in progress)
 
 - Chapter 8. Collection API enhancements
-- Chapter 9. Refactoring(testing(and debugging
+- Chapter 9. Refactoring, testing, and debugging
 - Chapter 10. Domain-specific languages using lambdas
 - Chapter 11. Using Optional as a better alternative to null
 - Chapter 12. New Date and Time API

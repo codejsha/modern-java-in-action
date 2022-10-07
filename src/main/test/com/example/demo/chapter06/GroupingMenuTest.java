@@ -20,7 +20,7 @@ class GroupingMenuTest {
 
     @BeforeEach
     void setUp() {
-        menu = DishData.DISH_LIST;
+        menu = DishData.DISHES;
         dishTags = DishData.DISH_TAGS;
     }
 

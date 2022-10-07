@@ -1,5 +1,6 @@
 package com.example.demo.chapter07;
 
+import com.example.demo.data.TextData;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Spliterator;
@@ -9,9 +10,7 @@ import java.util.stream.StreamSupport;
 @Slf4j
 public class WordCount {
     public static void main(String[] args) {
-        var sentence = " Nel   mezzo del cammin  di nostra  vita "
-                + "mi  ritrovai in una  selva oscura"
-                + " che la  dritta via era   smarrita ";
+        var sentence = String.join("", TextData.INFERNO);
 
         log.info("Word count for sentence: {}", countWordsIteratively(sentence));
         log.info("Word count for sentence: {}", countWordsUsingStream(sentence));

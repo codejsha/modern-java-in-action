@@ -16,7 +16,7 @@ class FilteringSpecialMenuTest {
 
     @BeforeEach
     void setUp() {
-        menu = DishTestData.SPECIAL_DISH_LIST;
+        menu = DishTestData.SPECIAL_DISHES;
     }
 
     @Test

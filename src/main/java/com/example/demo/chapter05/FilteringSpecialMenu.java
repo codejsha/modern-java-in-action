@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class FilteringSpecialMenu {
     public static void main(String[] args) {
-        var menu = DishData.SPECIAL_DISH_LIST;
+        var menu = DishData.SPECIAL_DISHES;
 
         // filtering dishes with calories less than 320
         log.info("Low calorie dishes: {}", lowCalorieDishes(menu));

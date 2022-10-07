@@ -10,7 +10,7 @@ import java.util.Optional;
 @Slf4j
 public class FindingMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISH_LIST;
+        var menu = DishData.DISHES;
 
         // finding any vegetarian dish
         log.info("Any vegetarian dish: {}", anyVegetarianDish(menu));

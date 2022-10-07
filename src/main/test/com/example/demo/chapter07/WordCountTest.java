@@ -1,5 +1,6 @@
 package com.example.demo.chapter07;
 
+import com.example.demo.data.TextTestData;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,9 +13,7 @@ class WordCountTest {
 
     @BeforeEach
     void setUp() {
-        sentence = " Nel   mezzo del cammin  di nostra  vita "
-                + "mi  ritrovai in una  selva oscura"
-                + " che la  dritta via era   smarrita ";
+        sentence = String.join("", TextTestData.INFERNO);
     }
 
     @Test

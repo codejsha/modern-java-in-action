@@ -17,7 +17,7 @@ class PartitioningMenuTest {
 
     @BeforeEach
     void setUp() {
-        menu = DishData.DISH_LIST;
+        menu = DishData.DISHES;
     }
 
     @Test

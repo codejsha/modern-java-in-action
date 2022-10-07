@@ -16,7 +16,7 @@ class ReducingMenuTest {
 
     @BeforeEach
     void setUp() {
-        menu = DishTestData.DISH_LIST;
+        menu = DishTestData.DISHES;
     }
 
     @Test
