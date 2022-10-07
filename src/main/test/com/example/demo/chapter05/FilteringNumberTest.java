@@ -20,10 +20,44 @@ class FilteringNumberTest {
     @Test
     void uniqueEvenNumbers() {
         var result = FilteringNumber.uniqueEvenNumbers(numbers);
+
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(number -> assertEquals(0, number % 2));
 
         log.info("Even numbers: {}", result);
+    }
+
+    @Test
+    void filterEvenNumbers() {
+        var result = FilteringNumber.filterNumbers(numbers, number -> number % 2 == 0);
+
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+        result.forEach(number -> assertEquals(0, number % 2));
+
+        log.info("Even numbers: {}", result);
+    }
+
+    @Test
+    void filterOddNumbers() {
+        var result = FilteringNumber.filterNumbers(numbers, number -> number % 2 != 0);
+
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+        result.forEach(number -> assertNotEquals(0, number % 2));
+
+        log.info("Odd numbers: {}", result);
+    }
+
+    @Test
+    void filterNumbersSmallerThan3() {
+        var result = FilteringNumber.filterNumbers(numbers, number -> number < 3);
+
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+        result.forEach(number -> assertTrue(number < 3));
+
+        log.info("Numbers smaller than 3: {}", result);
     }
 }
