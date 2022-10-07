@@ -3,6 +3,7 @@ package com.example.demo.chapter08;
 import com.example.demo.data.PeopleData;
 import com.example.demo.data.TransactionData;
 import com.example.demo.record.Transaction;
+import com.example.demo.util.CollectionUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
@@ -18,20 +19,25 @@ public class CollectionProcessing {
         var friendMovies = PeopleData.FRIEND_FAVORITE_MOVIES;
         var familyMovies = PeopleData.FAMILY_FAVORITE_MOVIES;
 
-        log.info("Exclude transactions that occurred in 2011: {}", removeTransactionIn2011(transactions));
-        log.info("Replace all characters in reference codes with uppercase: {}", replaceAllCharactersWithUppercase(codes));
+        log.info("Exclude transactions that occurred in 2011: {}",
+                removeTransactionIn2011(CollectionUtil.createModifiableList(transactions)));
+        log.info("Replace all characters in reference codes with uppercase: {}",
+                replaceAllCharactersWithUppercase(CollectionUtil.createModifiableList(codes)));
         log.info("Iterate over friends: {}", forEachFriends(friends));
         log.info("Sort favorite movies by key: {}", sortFavoriteMoviesByKey(friendMovies));
         log.info("Sort favorite movies by value: {}", sortFavoriteMoviesByValue(friendMovies));
 
         var friend = "Thibaut";
-        log.info("Get favorite movie with default: name={} move={}", friend, getFavoriteMoviesWithDefault(friendMovies, friend));
+        log.info("Get favorite movie with default: name={} move={}", friend,
+                getFavoriteMoviesWithDefault(friendMovies, friend));
 
         var friend2 = "Raphael";
         var movie = "Star Wars";
-        log.info("Remove favorite movie: {}", removeFavoriteMovie(friendMovies, friend2, movie));
+        log.info("Remove favorite movie: {}", removeFavoriteMovie(
+                CollectionUtil.createModifiableMap(friendMovies), friend2, movie));
 
-        log.info("Replace all movies with uppercase: {}", replaceAllMoviesWithUppercase(friendMovies));
+        log.info("Replace all movies with uppercase: {}", replaceAllMoviesWithUppercase(
+                CollectionUtil.createModifiableMap(friendMovies)));
 
         var everyoneMovies = mergeFavoriteMovies(friendMovies, familyMovies);
         log.info("Merge favorite movies: {}", everyoneMovies);
@@ -44,9 +50,8 @@ public class CollectionProcessing {
      * @return modified transaction list
      */
     public static List<Transaction> removeTransactionIn2011(List<Transaction> transactions) {
-        var newTransactions = new ArrayList<>(transactions);
-        newTransactions.removeIf(transaction -> transaction.year() == 2011);
-        return Collections.unmodifiableList(newTransactions);
+        transactions.removeIf(transaction -> transaction.year() == 2011);
+        return Collections.unmodifiableList(transactions);
     }
 
     /**
@@ -55,9 +60,8 @@ public class CollectionProcessing {
      * @return modified reference code list
      */
     public static List<String> replaceAllCharactersWithUppercase(List<String> codes) {
-        var newCodes = new ArrayList<>(codes);
-        newCodes.replaceAll(String::toUpperCase);
-        return Collections.unmodifiableList(newCodes);
+        codes.replaceAll(String::toUpperCase);
+        return Collections.unmodifiableList(codes);
     }
 
     /**
@@ -122,9 +126,8 @@ public class CollectionProcessing {
      */
     public static Map<String, String> removeFavoriteMovie(
             Map<String, String> favoriteMovies, String name, String movie) {
-        var newFavoriteMovies = new HashMap<>(favoriteMovies);
-        newFavoriteMovies.remove(name, movie);
-        return Collections.unmodifiableMap(newFavoriteMovies);
+        favoriteMovies.remove(name, movie);
+        return Collections.unmodifiableMap(favoriteMovies);
     }
 
     /**
@@ -133,9 +136,8 @@ public class CollectionProcessing {
      * @return modified favorite movie map
      */
     public static Map<String, String> replaceAllMoviesWithUppercase(Map<String, String> favoriteMovies) {
-        var newFavoriteMovies = new HashMap<>(favoriteMovies);
-        newFavoriteMovies.replaceAll((name, movie) -> movie.toUpperCase());
-        return Collections.unmodifiableMap(newFavoriteMovies);
+        favoriteMovies.replaceAll((name, movie) -> movie.toUpperCase());
+        return Collections.unmodifiableMap(favoriteMovies);
     }
 
     /**

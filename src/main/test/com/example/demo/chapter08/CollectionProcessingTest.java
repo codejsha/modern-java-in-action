@@ -3,6 +3,7 @@ package com.example.demo.chapter08;
 import com.example.demo.data.PeopleTestData;
 import com.example.demo.data.TransactionTestData;
 import com.example.demo.record.Transaction;
+import com.example.demo.util.CollectionUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +32,8 @@ class CollectionProcessingTest {
 
     @Test
     void removeTransactionIn2011() {
-        var result = CollectionProcessing.removeTransactionIn2011(transactions);
+        var result = CollectionProcessing.removeTransactionIn2011(
+                CollectionUtil.createModifiableList(transactions));
 
         assertNotNull(result);
         assertEquals(4, result.size());
@@ -44,7 +46,8 @@ class CollectionProcessingTest {
 
     @Test
     void replaceAllCharactersWithUppercase() {
-        var result = CollectionProcessing.replaceAllCharactersWithUppercase(codes);
+        var result = CollectionProcessing.replaceAllCharactersWithUppercase(
+                CollectionUtil.createModifiableList(codes));
 
         assertNotNull(result);
         assertEquals(3, result.size());
@@ -102,7 +105,8 @@ class CollectionProcessingTest {
     void removeFavoriteMovie() {
         var friend = "Raphael";
         var movie = "Star Wars";
-        var result = CollectionProcessing.removeFavoriteMovie(friendMovies, friend, movie);
+        var result = CollectionProcessing.removeFavoriteMovie(
+                CollectionUtil.createModifiableMap(friendMovies), friend, movie);
 
         assertNotNull(result);
         assertEquals(2, result.size());
@@ -113,7 +117,8 @@ class CollectionProcessingTest {
 
     @Test
     void replaceAllMoviesWithUppercase() {
-        var result = CollectionProcessing.replaceAllMoviesWithUppercase(friendMovies);
+        var result = CollectionProcessing.replaceAllMoviesWithUppercase(
+                CollectionUtil.createModifiableMap(friendMovies));
 
         assertNotNull(result);
         assertEquals(3, result.size());

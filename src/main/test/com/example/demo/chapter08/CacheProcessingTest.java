@@ -10,6 +10,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @Slf4j
 class CacheProcessingTest {
@@ -26,6 +27,7 @@ class CacheProcessingTest {
     void updateDigestTextLines() throws NoSuchAlgorithmException {
         var result = CacheProcessing.updateDigestTextLines(messageDigest, lines);
 
+        assertNotNull(result);
         assertEquals(3, result.size());
 
         log.info("Update message digest for lines: {}", result);
