@@ -16,10 +16,10 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 8. Collection API enhancements | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter08)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter08))
 - Chapter 9. Refactoring, testing, and debugging | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter09)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter09))
 - Chapter 10. Domain-specific languages using lambdas | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter10)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter10))
+- Chapter 11. Using Optional as a better alternative to null | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter11)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter11))
 
 (work in progress)
 
-- Chapter 11. Using Optional as a better alternative to null
 - Chapter 12. New Date and Time API
 - Chapter 13. Default methods
 - Chapter 14. The Java Module System
