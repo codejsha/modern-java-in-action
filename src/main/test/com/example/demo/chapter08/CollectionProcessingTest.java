@@ -34,13 +34,11 @@ class CollectionProcessingTest {
     void removeTransactionIn2011() {
         var result = CollectionProcessing.removeTransactionIn2011(
                 CollectionUtil.createModifiableList(transactions));
-
         assertNotNull(result);
         assertEquals(4, result.size());
         result.forEach(transaction -> {
             assertNotEquals(2011, transaction.year());
         });
-
         log.info("Exclude transactions that occurred in 2011: {}", result);
     }
 
@@ -48,23 +46,19 @@ class CollectionProcessingTest {
     void replaceAllCharactersWithUppercase() {
         var result = CollectionProcessing.replaceAllCharactersWithUppercase(
                 CollectionUtil.createModifiableList(codes));
-
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(code -> {
             assertEquals(code, code.toUpperCase());
         });
-
         log.info("Replace all characters in reference codes with uppercase: {}", result);
     }
 
     @Test
     void forEachFriends() {
         var result = CollectionProcessing.forEachFriends(friends);
-
         assertNotNull(result);
         assertEquals(3, result.size());
-
         log.info("Iterate over friends: {}", result);
     }
 
@@ -72,10 +66,8 @@ class CollectionProcessingTest {
     void sortFavoriteMoviesByKey() {
         var result = CollectionProcessing.sortFavoriteMoviesByKey(friendMovies);
         var orderedList = friendMovies.keySet().stream().sorted().toList();
-
         assertNotNull(result);
         assertEquals(orderedList, result.keySet().stream().toList());
-
         log.info("Sort favorite movies by key: {}", result);
     }
 
@@ -83,10 +75,8 @@ class CollectionProcessingTest {
     void sortFavoriteMoviesByValue() {
         var result = CollectionProcessing.sortFavoriteMoviesByValue(friendMovies);
         var orderedList = friendMovies.values().stream().sorted().toList();
-
         assertNotNull(result);
         assertEquals(orderedList, result.values().stream().toList());
-
         log.info("Sort favorite movies by value: {}", result);
     }
 
@@ -94,10 +84,8 @@ class CollectionProcessingTest {
     void getFavoriteMoviesWithDefault() {
         var friend = "Thibaut";
         var result = CollectionProcessing.getFavoriteMoviesWithDefault(friendMovies, friend);
-
         assertNotNull(result);
         assertEquals("Matrix", result);
-
         log.info("Get favorite movie with default: name={} move={}", friend, result);
     }
 
@@ -107,11 +95,9 @@ class CollectionProcessingTest {
         var movie = "Star Wars";
         var result = CollectionProcessing.removeFavoriteMovie(
                 CollectionUtil.createModifiableMap(friendMovies), friend, movie);
-
         assertNotNull(result);
         assertEquals(2, result.size());
         assertNull(result.get("Raphael"));
-
         log.info("Remove favorite movie: name={} move={}", friend, result);
     }
 
@@ -119,27 +105,23 @@ class CollectionProcessingTest {
     void replaceAllMoviesWithUppercase() {
         var result = CollectionProcessing.replaceAllMoviesWithUppercase(
                 CollectionUtil.createModifiableMap(friendMovies));
-
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach((key, value) -> {
             assertEquals(value, value.toUpperCase());
         });
-
         log.info("Replace all movies with uppercase: {}", result);
     }
 
     @Test
     void mergeFavoriteMovies() {
         var result = CollectionProcessing.mergeFavoriteMovies(friendMovies, familyMovies);
-
         assertNotNull(result);
         assertEquals(4, result.size());
         assertTrue(result.containsKey("Raphael"));
         assertTrue(result.containsKey("Cristina"));
         assertTrue(result.containsKey("Olivia"));
         assertTrue(result.containsKey("Teo"));
-
         log.info("Merge favorite movies: {}", result);
     }
 
@@ -147,13 +129,11 @@ class CollectionProcessingTest {
     void countFavoriteMovies() {
         var result = CollectionProcessing.countFavoriteMovies(
                 CollectionProcessing.mergeFavoriteMovies(friendMovies, familyMovies));
-
         assertNotNull(result);
         assertEquals(3, result.size());
         assertEquals(2, result.get("Star Wars"));
         assertEquals(2, result.get("James Bond"));
         assertEquals(1, result.get("Matrix"));
-
         log.info("Count favorite movies: {}", result);
     }
 }

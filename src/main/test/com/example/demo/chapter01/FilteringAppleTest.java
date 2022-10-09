@@ -26,7 +26,6 @@ class FilteringAppleTest {
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertEquals(Color.GREEN, apple.color()));
-
         log.info("Green apples: {}", apples);
     }
 
@@ -34,7 +33,6 @@ class FilteringAppleTest {
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertTrue(apple.weight() > 150));
-
         log.info("Heavy apples: {}", apples);
     }
 
@@ -68,7 +66,6 @@ class FilteringAppleTest {
         assertNotNull(apples);
         assertEquals(0, apples.size());
         // apples.forEach(apple -> assertTrue(apple.getWeight() < 80 || Color.BROWN.equals(apple.getColor())));
-
         log.info("Weird apples: {}", apples);
     }
 }

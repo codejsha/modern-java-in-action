@@ -23,7 +23,6 @@ class HiddenFileTest {
         assertTrue(files.length > 0);
         assertTrue(files[0].isHidden());
         assertTrue(files[0].toString().contains(".git"));
-
         log.info("Hidden files: {}", (Object[]) files);
     }
 

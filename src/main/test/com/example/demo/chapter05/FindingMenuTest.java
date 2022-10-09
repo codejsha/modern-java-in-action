@@ -23,47 +23,37 @@ class FindingMenuTest {
     @Test
     void anyVegetarianDish() {
         var result = FindingMenu.anyVegetarianDish(menu);
-
         assertTrue(result);
-
         log.info("Any vegetarian dish: {}", result);
     }
 
     @Test
     void allVegetarianDishes() {
         var result = FindingMenu.allVegetarianDishes(menu);
-
         assertFalse(result);
-
         log.info("All vegetarian dishes: {}", result);
     }
 
     @Test
     void noVegetarianDishes() {
         var result = FindingMenu.noVegetarianDishes(menu);
-
         assertFalse(result);
-
         log.info("No vegetarian dishes: {}", result);
     }
 
     @Test
     void findAnyVegetarianDish() {
         var result = FindingMenu.findAnyVegetarianDish(menu);
-
         assertTrue(result.isPresent());
         assertTrue(result.get().vegetarian());
-
         log.info("Any vegetarian dish: {}", result);
     }
 
     @Test
     void findFirstVegetarianDish() {
         var result = FindingMenu.findFirstVegetarianDish(menu);
-
         assertTrue(result.isPresent());
         assertTrue(result.get().vegetarian());
-
         log.info("First vegetarian dish: {}", result);
     }
 }

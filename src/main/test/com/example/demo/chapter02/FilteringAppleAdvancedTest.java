@@ -27,7 +27,6 @@ class FilteringAppleAdvancedTest {
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertTrue(apple.weight() > 150));
-
         log.info("Heavy apples: {}", apples);
     }
 
@@ -38,7 +37,6 @@ class FilteringAppleAdvancedTest {
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertEquals(Color.GREEN, apple.color()));
-
         log.info("Green apples: {}", apples);
     }
 
@@ -49,7 +47,6 @@ class FilteringAppleAdvancedTest {
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertEquals(Color.RED, apple.color()));
-
         log.info("Red apples: {}", apples);
     }
 
@@ -63,7 +60,6 @@ class FilteringAppleAdvancedTest {
         //     assertEquals(Color.RED, apple.color());
         //     assertTrue(apple.weight() > 150);
         // });
-
         log.info("Red and heavy apples: {}", apples);
     }
 }

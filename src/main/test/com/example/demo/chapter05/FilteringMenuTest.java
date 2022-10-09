@@ -23,11 +23,9 @@ class FilteringMenuTest {
     @Test
     void vegetarianDishes() {
         var result = FilteringMenu.filterVegetarianDishes(menu);
-
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(dish -> assertTrue(dish.vegetarian()));
-
         log.info("Vegetarian dishes: {}", result);
     }
 }

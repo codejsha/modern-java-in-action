@@ -23,34 +23,28 @@ class PartitioningMenuTest {
     @Test
     void partitionByVegetarian() {
         var result = PartitioningMenu.partitionByVegetarian(menu);
-
         assertNotNull(result);
         assertEquals(4, result.get(true).size());
         assertEquals(5, result.get(false).size());
-
         log.info("Dishes partitioned by vegetarian: {}", result);
     }
 
     @Test
     void vegetarianDishesByType() {
         var result = PartitioningMenu.vegetarianDishesByType(menu);
-
         assertNotNull(result);
         assertEquals(4, result.get(true).get(Dish.Type.OTHER).size());
         assertEquals(2, result.get(false).get(Dish.Type.FISH).size());
         assertEquals(3, result.get(false).get(Dish.Type.MEAT).size());
-
         log.info("Vegetarian dishes by type: {}", result);
     }
 
     @Test
     void mostCaloricPartitionedByVegetarian() {
         var result = PartitioningMenu.mostCaloricPartitionedByVegetarian(menu);
-
         assertNotNull(result);
         assertEquals("pizza", result.get(true).name());
         assertEquals("pork", result.get(false).name());
-
         log.info("Most caloric partitioned by vegetarian: {}", result);
     }
 }

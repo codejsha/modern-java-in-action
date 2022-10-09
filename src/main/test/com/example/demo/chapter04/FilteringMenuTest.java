@@ -25,7 +25,6 @@ class FilteringMenuTest {
         var dishes = FilteringMenu.threeHighCalorieDishes(menu);
         assertNotNull(dishes);
         assertEquals(3, dishes.size());
-
         log.info("High calorie dishes: {}", dishes);
     }
 }

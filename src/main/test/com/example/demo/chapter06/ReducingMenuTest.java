@@ -22,9 +22,7 @@ class ReducingMenuTest {
     @Test
     void calculateTotalCalories() {
         var result = ReducingMenu.calculateTotalCalories(menu);
-
         assertEquals(4300, result);
-
         log.info("Total calories in menu: {}", result);
 
     }
@@ -32,27 +30,21 @@ class ReducingMenuTest {
     @Test
     void calculateTotalCaloriesWithMethodReference() {
         var result = ReducingMenu.calculateTotalCaloriesWithMethodReference(menu);
-
         assertEquals(4300, result);
-
         log.info("Total calories in menu: {}", result);
     }
 
     @Test
     void calculateTotalCaloriesWithCollectors() {
         var result = ReducingMenu.calculateTotalCaloriesWithCollectors(menu);
-
         assertEquals(4300, result);
-
         log.info("Total calories in menu: {}", result);
     }
 
     @Test
     void calculateTotalCaloriesUsingSum() {
         var result = ReducingMenu.calculateTotalCaloriesUsingSum(menu);
-
         assertEquals(4300, result);
-
         log.info("Total calories in menu: {}", result);
     }
 }

@@ -22,55 +22,45 @@ class FilteringSpecialMenuTest {
     @Test
     void lowCalorieDishes() {
         var result = FilteringSpecialMenu.lowCalorieDishes(menu);
-
         assertNotNull(result);
         assertEquals(2, result.size());
         result.forEach(dish -> assertTrue(dish.calories() < 320));
-
         log.info("Low calorie dishes: {}", result);
     }
 
     @Test
     void lowCalorieDishes2() {
         var result = FilteringSpecialMenu.lowCalorieDishes2(menu);
-
         assertNotNull(result);
         assertEquals(2, result.size());
         result.forEach(dish -> assertTrue(dish.calories() < 320));
-
         log.info("Low calorie dishes: {}", result);
     }
 
     @Test
     void highCalorieDishes() {
         var result = FilteringSpecialMenu.highCalorieDishes(menu);
-
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(dish -> assertTrue(dish.calories() > 300));
-
         log.info("High calorie dishes: {}", result);
     }
 
     @Test
     void threeHighCalorieDishes() {
         var result = FilteringSpecialMenu.threeHighCalorieDishes(menu);
-
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(dish -> assertTrue(dish.calories() > 300));
-
         log.info("Three high calorie dishes: {}", result);
     }
 
     @Test
     void otherHighCalorieDishes() {
         var result = FilteringSpecialMenu.otherHighCalorieDishes(menu);
-
         assertNotNull(result);
         assertEquals(1, result.size());
         result.forEach(dish -> assertTrue(dish.calories() > 300));
-
         log.info("Other high calorie dishes: {}", result);
     }
 }

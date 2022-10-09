@@ -26,7 +26,6 @@ class FilteringListTest {
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertEquals(Color.GREEN, apple.color()));
-
         log.info("Green apples: {}", apples);
     }
 
@@ -36,7 +35,6 @@ class FilteringListTest {
         assertNotNull(weights);
         assertTrue(weights.size() > 0);
         weights.forEach(weight -> assertTrue(weight > 0));
-
         weights.forEach(weight -> log.info("Weight of green apple: {}", weight));
     }
 }

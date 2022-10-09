@@ -22,33 +22,27 @@ class MappingSpecialMenuTest {
     @Test
     void dishNames() {
         var result = MappingSpecialMenu.dishNames(menu);
-
         assertNotNull(result);
         assertEquals(5, result.size());
         result.forEach(name -> assertTrue(name.length() > 0));
-
         log.info("Dish names: {}", result);
     }
 
     @Test
     void dishNameLengths() {
         var result = MappingSpecialMenu.dishNameLengths(menu);
-
         assertNotNull(result);
         assertEquals(5, result.size());
         result.forEach(length -> assertTrue(length > 0));
-
         log.info("Dish name lengths: {}", result);
     }
 
     @Test
     void uniqueDishNameCharacters() {
         var result = MappingSpecialMenu.uniqueDishNameCharacters(menu);
-
         assertNotNull(result);
         assertEquals(15, result.size());
         result.forEach(character -> assertEquals(1, character.length()));
-
         log.info("Unique dish name characters: {}", result);
     }
 }
