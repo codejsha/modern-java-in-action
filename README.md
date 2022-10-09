@@ -14,10 +14,10 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 6. Collecting data with streams | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter06)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter06))
 - Chapter 7. Parallel data processing and performance | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter07)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter07))
 - Chapter 8. Collection API enhancements | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter08)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter08))
+- Chapter 9. Refactoring, testing, and debugging | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter09)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/test/com/example/demo/chapter09))
 
 (work in progress)
 
-- Chapter 9. Refactoring, testing, and debugging
 - Chapter 10. Domain-specific languages using lambdas
 - Chapter 11. Using Optional as a better alternative to null
 - Chapter 12. New Date and Time API
