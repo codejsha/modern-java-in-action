@@ -17,10 +17,10 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 9. Refactoring, testing, and debugging | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter09)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter09))
 - Chapter 10. Domain-specific languages using lambdas | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter10)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter10))
 - Chapter 11. Using Optional as a better alternative to null | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter11)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter11))
+- Chapter 12. New Date and Time API | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter12)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter12))
 
 (work in progress)
 
-- Chapter 12. New Date and Time API
 - Chapter 13. Default methods
 - Chapter 14. The Java Module System
 - Chapter 15. Concepts behind CompletableFuture and reactive programming
