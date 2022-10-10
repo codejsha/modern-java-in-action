@@ -22,7 +22,7 @@ class ParallelProcessingTest {
     }
 
     @Test
-    void sequentialSum() {
+    void testSequentialSum() {
         config.number = 100L;
         var result1 = ParallelProcessing.sequentialSum(config);
         assertEquals(5050L, result1);
@@ -35,7 +35,7 @@ class ParallelProcessingTest {
     }
 
     @Test
-    void parallelSum() {
+    void testParallelSum() {
         config.number = 100L;
         var result1 = ParallelProcessing.parallelSum(config);
         assertEquals(5050L, result1);
@@ -48,7 +48,7 @@ class ParallelProcessingTest {
     }
 
     @Test
-    void rangedSum() {
+    void testRangedSum() {
         config.number = 100L;
         var result1 = ParallelProcessing.rangedSum(config);
         assertEquals(5050L, result1);
@@ -61,7 +61,7 @@ class ParallelProcessingTest {
     }
 
     @Test
-    void parallelRangedSum() {
+    void testParallelRangedSum() {
         config.number = 100L;
         var result1 = ParallelProcessing.parallelRangedSum(config);
         assertEquals(5050L, result1);

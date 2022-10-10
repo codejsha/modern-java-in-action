@@ -17,7 +17,7 @@ class NumberStreamTest {
     }
 
     @Test
-    void generateEvenNumbers() {
+    void testGenerateEvenNumbers() {
         var result = NumberStream.generateEvenNumbers(START, END);
         assertNotNull(result);
         assertEquals(50, result.size());
@@ -26,7 +26,7 @@ class NumberStreamTest {
     }
 
     @Test
-    void pythagoreanTriple1() {
+    void testPythagoreanTriple1() {
         var result = NumberStream.pythagoreanTriple1(START, END);
         assertNotNull(result);
         assertEquals(5, result.size());
@@ -40,7 +40,7 @@ class NumberStreamTest {
     }
 
     @Test
-    void pythagoreanTriple2() {
+    void testPythagoreanTriple2() {
         var result = NumberStream.pythagoreanTriple2(START, END);
         assertNotNull(result);
         assertEquals(5, result.size());

@@ -37,31 +37,31 @@ class FilteringAppleTest {
     }
 
     @Test
-    void filterGreenApples() {
+    void testFilterGreenApples() {
         var apples = filteringApple.filterGreenApples(inventory);
         assertGreenApples(apples);
     }
 
     @Test
-    void filterGreenApples2() {
+    void testFilterGreenApples2() {
         var apples = filteringApple.filterGreenApples2(inventory);
         assertGreenApples(apples);
     }
 
     @Test
-    void filterHeavyApples() {
+    void testFilterHeavyApples() {
         var apples = filteringApple.filterHeavyApples(inventory);
         assertHeavyApples(apples);
     }
 
     @Test
-    void filterHeavyApples2() {
+    void testFilterHeavyApples2() {
         var apples = filteringApple.filterHeavyApples2(inventory);
         assertHeavyApples(apples);
     }
 
     @Test
-    void filterWeirdApples() {
+    void testFilterWeirdApples() {
         var apples = filteringApple.filterWeirdApples(inventory);
         assertNotNull(apples);
         assertEquals(0, apples.size());

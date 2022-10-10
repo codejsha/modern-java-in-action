@@ -20,7 +20,7 @@ class MappingSpecialMenuTest {
     }
 
     @Test
-    void dishNames() {
+    void testDishNames() {
         var result = MappingSpecialMenu.dishNames(menu);
         assertNotNull(result);
         assertEquals(5, result.size());
@@ -29,7 +29,7 @@ class MappingSpecialMenuTest {
     }
 
     @Test
-    void dishNameLengths() {
+    void testDishNameLengths() {
         var result = MappingSpecialMenu.dishNameLengths(menu);
         assertNotNull(result);
         assertEquals(5, result.size());
@@ -38,7 +38,7 @@ class MappingSpecialMenuTest {
     }
 
     @Test
-    void uniqueDishNameCharacters() {
+    void testUniqueDishNameCharacters() {
         var result = MappingSpecialMenu.uniqueDishNameCharacters(menu);
         assertNotNull(result);
         assertEquals(15, result.size());

@@ -16,7 +16,7 @@ class ForkJoinProcessingTest {
         }
 
         @Test
-        void forkJoinSum() {
+        void testForkJoinSum() {
             var result1 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(100L);
             assertEquals(5050L, result1);
             log.info("Sum of Sequence: {}", result1);

@@ -26,7 +26,7 @@ class PracticeTest {
     }
 
     @Test
-    void exercise1() {
+    void testExercise1() {
         var result = Practice.exercise1(transactions);
         assertNotNull(result);
         assertEquals(2, result.size());
@@ -36,7 +36,7 @@ class PracticeTest {
     }
 
     @Test
-    void exercise2() {
+    void testExercise2() {
         var result = Practice.exercise2(traders);
         assertNotNull(result);
         assertEquals(2, result.size());
@@ -46,7 +46,7 @@ class PracticeTest {
     }
 
     @Test
-    void exercise3() {
+    void testExercise3() {
         var result = Practice.exercise3(transactions);
         assertNotNull(result);
         assertEquals(3, result.size());
@@ -56,7 +56,7 @@ class PracticeTest {
     }
 
     @Test
-    void exercise4() {
+    void testExercise4() {
         var result = Practice.exercise4(traders);
         assertNotNull(result);
         assertTrue(result.contains("Alan"));
@@ -67,14 +67,14 @@ class PracticeTest {
     }
 
     @Test
-    void exercise5() {
+    void testExercise5() {
         var result = Practice.exercise5(traders);
         assertTrue(result);
         log.info("exercise5 | are any traders based in Milan?: {}", result);
     }
 
     @Test
-    void exercise6() {
+    void testExercise6() {
         var result = Practice.exercise6(transactions);
         assertNotNull(result);
         assertEquals(4, result.size());
@@ -82,14 +82,14 @@ class PracticeTest {
     }
 
     @Test
-    void exercise7() {
+    void testExercise7() {
         var result = Practice.exercise7(transactions);
         assertEquals(1000, result);
         log.info("exercise7 | highest value of all the transactions: {}", result);
     }
 
     @Test
-    void exercise8() {
+    void testExercise8() {
         var result = Practice.exercise8(transactions);
         assertEquals(300, result);
         log.info("exercise8 | smallest transaction: {}", result);

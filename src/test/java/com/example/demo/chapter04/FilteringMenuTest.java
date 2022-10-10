@@ -21,7 +21,7 @@ class FilteringMenuTest {
     }
 
     @Test
-    void threeHighCalorieDishes() {
+    void testThreeHighCalorieDishes() {
         var dishes = FilteringMenu.threeHighCalorieDishes(menu);
         assertNotNull(dishes);
         assertEquals(3, dishes.size());

@@ -19,7 +19,7 @@ class PartitioningPrimeNumberTest {
     }
 
     @Test
-    void partitionPrimes() {
+    void testPartitionPrimes() {
         var result = PartitioningPrimeNumber.partitionPrimes(upperBoundNumber);
         assertNotNull(result);
         assertEquals(25, result.get(true).size());
@@ -30,7 +30,7 @@ class PartitioningPrimeNumberTest {
     }
 
     @Test
-    void partitionPrimesWithCustomCollector() {
+    void testPartitionPrimesWithCustomCollector() {
         var result = PartitioningPrimeNumber.partitionPrimesWithCustomCollector(upperBoundNumber);
         assertNotNull(result);
         assertEquals(25, result.get(true).size());

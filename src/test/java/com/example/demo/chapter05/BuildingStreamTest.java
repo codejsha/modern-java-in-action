@@ -13,7 +13,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsOfValues() {
+    void testStreamsOfValues() {
         var result = BuildingStream.streamsOfValues().toList();
         assertNotNull(result);
         assertEquals(4, result.size());
@@ -22,7 +22,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamFromNullable() {
+    void testStreamFromNullable() {
         var result = BuildingStream.streamFromNullable().toList();
         assertNotNull(result);
         assertEquals(0, result.size());
@@ -30,7 +30,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsFromArrays() {
+    void testStreamsFromArrays() {
         var result = BuildingStream.streamsFromArrays().toList();
         assertNotNull(result);
         assertEquals(4, result.size());
@@ -39,7 +39,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsFromFiles() {
+    void testStreamsFromFiles() {
         var result = BuildingStream.streamsFromFiles();
         assertNotNull(result);
         assertEquals(450, result);
@@ -47,7 +47,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsOfEvenNumbers() {
+    void testStreamsOfEvenNumbers() {
         var result = BuildingStream.streamsOfEvenNumbers().toList();
         assertNotNull(result);
         assertEquals(10, result.size());
@@ -56,7 +56,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsOfEvenNumbers2() {
+    void testStreamsOfEvenNumbers2() {
         var result = BuildingStream.streamsOfEvenNumbers2().toList();
         assertNotNull(result);
         assertEquals(50, result.size());
@@ -65,7 +65,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsOfMultipleOfFour() {
+    void testStreamsOfMultipleOfFour() {
         var result = BuildingStream.streamsOfMultipleOfFour().toList();
         assertNotNull(result);
         assertEquals(25, result.size());
@@ -74,7 +74,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsOfRandomValues() {
+    void testStreamsOfRandomValues() {
         var result = BuildingStream.streamsOfRandomValues().toList();
         assertNotNull(result);
         assertEquals(10, result.size());
@@ -83,7 +83,7 @@ class BuildingStreamTest {
     }
 
     @Test
-    void streamsOfFibonacciNumbers() {
+    void testStreamsOfFibonacciNumbers() {
         var result = BuildingStream.streamsOfFibonacciSequence().toList();
         assertNotNull(result);
         assertEquals(10, result.size());

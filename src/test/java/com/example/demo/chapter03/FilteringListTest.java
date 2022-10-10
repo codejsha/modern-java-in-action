@@ -21,7 +21,7 @@ class FilteringListTest {
     }
 
     @Test
-    void filterGreenApples() {
+    void testFilterGreenApples() {
         var apples = FilteringList.filterGreenApples(inventory);
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -30,7 +30,7 @@ class FilteringListTest {
     }
 
     @Test
-    void eachGreenAppleWeight() {
+    void testEachGreenAppleWeight() {
         var weights = FilteringList.eachGreenAppleWeight(inventory);
         assertNotNull(weights);
         assertTrue(weights.size() > 0);

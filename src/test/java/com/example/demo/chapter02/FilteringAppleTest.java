@@ -25,7 +25,7 @@ class FilteringAppleTest {
     }
 
     @Test
-    void filterHeavyApples() {
+    void testFilterHeavyApples() {
         var apples = FilteringApple.filterApples(inventory, new AppleHeavyWeightPredicate());
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -34,7 +34,7 @@ class FilteringAppleTest {
     }
 
     @Test
-    void filterGreenApples() {
+    void testFilterGreenApples() {
         var apples = FilteringApple.filterApples(inventory, new AppleGreenColorPredicate());
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -43,7 +43,7 @@ class FilteringAppleTest {
     }
 
     @Test
-    void filterRedApples() {
+    void testFilterRedApples() {
         var apples = FilteringApple.filterApples(inventory, new AppleRedColorPredicate());
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -52,7 +52,7 @@ class FilteringAppleTest {
     }
 
     @Test
-    void filterRedAndHeavyApples() {
+    void testFilterRedAndHeavyApples() {
         var apples = FilteringApple.filterApples(inventory, new AppleRedColorAndHeavyWeightPredicate());
         assertNotNull(apples);
         assertEquals(0, apples.size());

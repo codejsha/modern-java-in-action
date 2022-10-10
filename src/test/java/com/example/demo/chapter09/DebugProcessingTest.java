@@ -15,7 +15,7 @@ class DebugProcessingTest {
     }
 
     @Test
-    void filterNumbers() {
+    void testFilterNumbers() {
         var numbers = List.of(2, 3, 4, 5);
         var result = DebugProcessing.filterNumbers(numbers);
         assertNotNull(result);
