@@ -19,11 +19,11 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 11. Using Optional as a better alternative to null | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter11)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter11))
 - Chapter 12. New Date and Time API | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter12)
 - Chapter 13. Default methods | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter13)
+- Chapter 14. The Java Module System
+- Chapter 15. Concepts behind CompletableFuture and reactive programming | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter15)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter15))
 
 (work in progress)
 
-- Chapter 14. The Java Module System
-- Chapter 15. Concepts behind CompletableFuture and reactive programming
 - Chapter 16. CompletableFuture: composable asynchronous programming
 - Chapter 17. Reactive programming
 - Chapter 18. Thinking functionally
