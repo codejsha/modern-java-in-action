@@ -61,4 +61,10 @@ tasks {
     withType<Test> {
         useJUnitPlatform()
     }
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
+    processTestResources {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
 }
