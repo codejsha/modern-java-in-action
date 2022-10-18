@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 public class CompletableFutureCombine {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         var executorService = Executors.newFixedThreadPool(10);
-        int x = 1337;
+        var x = 1337;
 
         var a = new CompletableFuture<Integer>();
         var b = new CompletableFuture<Integer>();

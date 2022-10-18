@@ -8,7 +8,7 @@ import java.util.List;
 @Slf4j
 public class ObserverPatternOld {
     public static void main(String[] args) {
-        Feed feed = new Feed();
+        var feed = new Feed();
         feed.registerObserver(new NYTimes());
         feed.registerObserver(new Guardian());
         feed.registerObserver(new LeMonde());

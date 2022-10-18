@@ -5,12 +5,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ChainOfResponsibilityPatternOld {
     public static void main(String[] args) {
-        ProcessingObject<String> processing1 = new HeaderTextProcessing();
-        ProcessingObject<String> processing2 = new SpellCheckerProcessing();
+        var processing1 = new HeaderTextProcessing();
+        var processing2 = new SpellCheckerProcessing();
         processing1.setSuccessor(processing2);
 
-        String result = processing1.handle("Aren't labdas really sexy?!!");
-        log.info(result);
+        log.info(processing1.handle("Aren't labdas really sexy?!!"));
     }
 
     private static abstract class ProcessingObject<T> {
@@ -21,7 +20,7 @@ public class ChainOfResponsibilityPatternOld {
         }
 
         public T handle(T input) {
-            T result = handleWork(input);
+            var result = handleWork(input);
             if (successor != null) {
                 return successor.handle(result);
             }

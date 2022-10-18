@@ -3,7 +3,6 @@ package com.example.demo.chapter07;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 import java.util.stream.LongStream;
 
@@ -31,28 +30,28 @@ public class ForkJoinProcessing {
         }
 
         public static long forkJoinSum(long number) {
-            long[] numbers = LongStream.rangeClosed(1, number).toArray();
-            ForkJoinTask<Long> task = new ForkJoinSumCalculator(numbers);
+            var numbers = LongStream.rangeClosed(1, number).toArray();
+            var task = new ForkJoinSumCalculator(numbers);
             return new ForkJoinPool().invoke(task);
         }
 
         @Override
         protected Long compute() {
-            int length = end - start;
+            var length = end - start;
             if (length <= THRESHOLD) {
                 return computeSequentially();
             }
-            ForkJoinSumCalculator leftTask = new ForkJoinSumCalculator(numbers, start, start + length / 2);
+            var leftTask = new ForkJoinSumCalculator(numbers, start, start + length / 2);
             leftTask.fork();
-            ForkJoinSumCalculator rightTask = new ForkJoinSumCalculator(numbers, start + length / 2, end);
-            Long rightResult = rightTask.compute();
-            Long leftResult = leftTask.join();
+            var rightTask = new ForkJoinSumCalculator(numbers, start + length / 2, end);
+            var rightResult = rightTask.compute();
+            var leftResult = leftTask.join();
             return leftResult + rightResult;
         }
 
         private long computeSequentially() {
-            long sum = 0;
-            for (int i = start; i < end; i++) {
+            var sum = 0;
+            for (var i = start; i < end; i++) {
                 sum += numbers[i];
             }
             return sum;

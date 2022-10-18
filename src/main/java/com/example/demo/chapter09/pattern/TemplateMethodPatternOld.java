@@ -14,7 +14,7 @@ public abstract class TemplateMethodPatternOld {
     }
 
     public void processCustomer(int id) {
-        Customer customer = Database.getCustomerWithId(id);
+        var customer = Database.getCustomerWithId(id);
         makeCustomerHappy(customer);
     }
 

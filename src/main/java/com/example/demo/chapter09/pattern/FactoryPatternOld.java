@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FactoryPatternOld {
     public static void main(String[] args) {
-        Product product = ProductFactory.createProduct("loan");
+        var product = ProductFactory.createProduct("loan");
         log.info("Product: {}", product.getClass().getSimpleName());
     }
 
@@ -14,16 +14,12 @@ public class FactoryPatternOld {
 
     public static class ProductFactory {
         public static Product createProduct(String name) {
-            switch (name) {
-                case "loan":
-                    return new Loan();
-                case "stock":
-                    return new Stock();
-                case "bond":
-                    return new Bond();
-                default:
-                    throw new RuntimeException("No such product " + name);
-            }
+            return switch (name) {
+                case "loan" -> new Loan();
+                case "stock" -> new Stock();
+                case "bond" -> new Bond();
+                default -> throw new RuntimeException("No such product " + name);
+            };
         }
     }
 

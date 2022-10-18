@@ -14,7 +14,7 @@ public class FilteringApple {
     public static void main(String[] args) {
         var inventory = AppleData.APPLE_LIST;
 
-        FilteringApple filteringApple = new FilteringApple();
+        var filteringApple = new FilteringApple();
         log.info("Green apples: {}", filteringApple.filterGreenApples(inventory));
         log.info("Green apples: {}", filteringApple.filterGreenApples2(inventory));
         log.info("Heavy apples: {}", filteringApple.filterHeavyApples(inventory));

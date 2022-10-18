@@ -30,7 +30,7 @@ public class FactoryPattern {
 
     public static class ProductFactory {
         public static Product createProduct(String name) {
-            Supplier<Product> product = map.get(name);
+            var product = map.get(name);
             if (product != null) {
                 return product.get();
             }

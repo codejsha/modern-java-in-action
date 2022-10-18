@@ -8,7 +8,7 @@ import java.io.FileFilter;
 @Slf4j
 public class HiddenFile {
     public static void main(String[] args) {
-        HiddenFile hiddenFile = new HiddenFile();
+        var hiddenFile = new HiddenFile();
         log.info("Hidden files: {}", (Object[]) hiddenFile.listHiddenFiles());
         log.info("Hidden files: {}", (Object[]) hiddenFile.listHiddenFiles2());
         log.info("Hidden files: {}", (Object[]) hiddenFile.listHiddenFiles3());

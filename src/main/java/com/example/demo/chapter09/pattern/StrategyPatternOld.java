@@ -5,10 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class StrategyPatternOld {
     public static void main(String[] args) {
-        Validator validator1 = new Validator(new IsNumeric());
+        var validator1 = new Validator(new IsNumeric());
         log.info("Is numeric: {}", validator1.validate("aaaa"));
 
-        Validator validator2 = new Validator(new IsAllLowerCase());
+        var validator2 = new Validator(new IsAllLowerCase());
         log.info("Is all lowercase: {}", validator2.validate("bbbb"));
     }
 

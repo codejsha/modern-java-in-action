@@ -8,10 +8,10 @@ import java.util.Properties;
 @Slf4j
 public class PropertyProcessing {
     public static int readDurationImperative(Properties props, String name) {
-        String value = props.getProperty(name);
+        var value = props.getProperty(name);
         if (value != null) {
             try {
-                int i = Integer.parseInt(value);
+                var i = Integer.parseInt(value);
                 if (i > 0) {
                     return i;
                 }

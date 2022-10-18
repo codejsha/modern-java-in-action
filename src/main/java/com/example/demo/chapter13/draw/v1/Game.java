@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Game {
     public static void main(String[] args) {
-        List<Resizable> resizableShapes = List.of(
+        var resizableShapes = List.of(
                 new Square(),
                 new Rectangle(),
                 new Ellipse()

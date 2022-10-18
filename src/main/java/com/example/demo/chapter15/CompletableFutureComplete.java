@@ -10,11 +10,11 @@ import java.util.concurrent.Executors;
 public class CompletableFutureComplete {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         var executorService = Executors.newFixedThreadPool(10);
-        int x = 1337;
+        var x = 1337;
 
         var a = new CompletableFuture<Integer>();
         executorService.submit(() -> a.complete(f(x)));
-        int b = g(x);
+        var b = g(x);
         log.info(String.valueOf(a.get() + b));
 
         executorService.shutdown();
