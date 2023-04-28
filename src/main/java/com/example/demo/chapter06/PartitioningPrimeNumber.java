@@ -24,6 +24,7 @@ public class PartitioningPrimeNumber {
 
     /**
      * Numbers partitioned in prime and non-prime
+     *
      * @param n number
      * @return numbers partitioned in prime and non-prime
      */
@@ -35,6 +36,7 @@ public class PartitioningPrimeNumber {
 
     /**
      * Numbers partitioned in prime and non-prime
+     *
      * @param n number
      * @return numbers partitioned in prime and non-prime
      */
@@ -44,9 +46,9 @@ public class PartitioningPrimeNumber {
                 .collect(new PrimeNumbersCollector());
     }
 
-
     /**
      * Check if a candidate number is prime
+     *
      * @param candidate candidate number
      * @return true if candidate number is prime
      */
@@ -58,6 +60,7 @@ public class PartitioningPrimeNumber {
 
     /**
      * Check if a candidate number is prime
+     *
      * @param candidate candidate number
      * @return true if candidate number is prime
      */

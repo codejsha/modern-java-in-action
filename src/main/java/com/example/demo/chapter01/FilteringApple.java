@@ -14,16 +14,16 @@ public class FilteringApple {
     public static void main(String[] args) {
         var inventory = AppleData.APPLE_LIST;
 
-        var filteringApple = new FilteringApple();
-        log.info("Green apples: {}", filteringApple.filterGreenApples(inventory));
-        log.info("Green apples: {}", filteringApple.filterGreenApples2(inventory));
-        log.info("Heavy apples: {}", filteringApple.filterHeavyApples(inventory));
-        log.info("Heavy apples: {}", filteringApple.filterHeavyApples2(inventory));
-        log.info("Weird apples: {}", filteringApple.filterWeirdApples(inventory));
+        log.info("Green apples: {}", filterGreenApples(inventory));
+        log.info("Green apples: {}", filterGreenApples2(inventory));
+        log.info("Heavy apples: {}", filterHeavyApples(inventory));
+        log.info("Heavy apples: {}", filterHeavyApples2(inventory));
+        log.info("Weird apples: {}", filterWeirdApples(inventory));
     }
 
     /**
      * predicate method to filter green apples
+     *
      * @param apple apple
      * @return boolean result for condition
      */
@@ -33,6 +33,7 @@ public class FilteringApple {
 
     /**
      * predicate method to filter heavy apples
+     *
      * @param apple apple
      * @return boolean result for condition
      */
@@ -42,6 +43,7 @@ public class FilteringApple {
 
     /**
      * filtering method for predicate
+     *
      * @param inventory apple list
      * @param predicate predicate
      * @return filtered apple list
@@ -58,47 +60,51 @@ public class FilteringApple {
 
     /**
      * filter green apples by predicate
+     *
      * @param inventory apple list
      * @return filtered apple list
      */
-    public List<Apple> filterGreenApples(List<Apple> inventory) {
+    public static List<Apple> filterGreenApples(List<Apple> inventory) {
         return filterApples(inventory, FilteringApple::isGreenApple);
     }
 
     /**
      * filter heavy apples by lambda
+     *
      * @param inventory apple list
      * @return filtered apple list
      */
-    public List<Apple> filterGreenApples2(List<Apple> inventory) {
+    public static List<Apple> filterGreenApples2(List<Apple> inventory) {
         return filterApples(inventory, (Apple apple) -> Color.GREEN.equals(apple.color()));
     }
 
     /**
      * filter heavy apples by predicate
+     *
      * @param inventory apple list
      * @return filtered apple list
      */
-    public List<Apple> filterHeavyApples(List<Apple> inventory) {
+    public static List<Apple> filterHeavyApples(List<Apple> inventory) {
         return filterApples(inventory, FilteringApple::isHeavyApple);
     }
 
-
     /**
      * filter heavy apples by lambda
+     *
      * @param inventory apple list
      * @return filtered apple list
      */
-    public List<Apple> filterHeavyApples2(List<Apple> inventory) {
+    public static List<Apple> filterHeavyApples2(List<Apple> inventory) {
         return filterApples(inventory, (Apple apple) -> apple.weight() > 150);
     }
 
     /**
      * filter weird apples by lambda
+     *
      * @param inventory apple list
      * @return filtered apple list
      */
-    public List<Apple> filterWeirdApples(List<Apple> inventory) {
+    public static List<Apple> filterWeirdApples(List<Apple> inventory) {
         return filterApples(inventory, (Apple apple) -> apple.weight() < 80 || Color.BROWN.equals(apple.color()));
     }
 }

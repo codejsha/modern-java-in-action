@@ -26,6 +26,7 @@ public class CacheProcessing {
 
     /**
      * Update message digest for lines
+     *
      * @param messageDigest message digest
      * @param lines         text lines
      * @return result

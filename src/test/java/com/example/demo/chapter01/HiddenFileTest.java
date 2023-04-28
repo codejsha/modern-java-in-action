@@ -11,11 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Slf4j
 class HiddenFileTest {
-    private HiddenFile hiddenFile;
-
     @BeforeEach
     void setUp() {
-        hiddenFile = new HiddenFile();
     }
 
     void assertHiddenFiles(File[] files) {
@@ -28,19 +25,19 @@ class HiddenFileTest {
 
     @Test
     void testListHiddenFiles() {
-        var files = hiddenFile.listHiddenFiles();
+        var files = HiddenFile.listHiddenFiles();
         assertHiddenFiles(files);
     }
 
     @Test
     void testListHiddenFiles2() {
-        var files = hiddenFile.listHiddenFiles2();
+        var files = HiddenFile.listHiddenFiles2();
         assertHiddenFiles(files);
     }
 
     @Test
     void testListHiddenFiles3() {
-        var files = hiddenFile.listHiddenFiles3();
+        var files = HiddenFile.listHiddenFiles3();
         assertHiddenFiles(files);
     }
 }

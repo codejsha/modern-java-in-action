@@ -46,6 +46,7 @@ public class CollectionProcessing {
 
     /**
      * remove elements from a list
+     *
      * @param transactions transaction list
      * @return modified transaction list
      */
@@ -56,6 +57,7 @@ public class CollectionProcessing {
 
     /**
      * replace all characters in a list
+     *
      * @param codes reference code list
      * @return modified reference code list
      */
@@ -66,6 +68,7 @@ public class CollectionProcessing {
 
     /**
      * iterate over map
+     *
      * @param friends friend map
      * @return friend map
      */
@@ -76,6 +79,7 @@ public class CollectionProcessing {
 
     /**
      * sort map
+     *
      * @param favoriteMovies favorite movie map
      * @return sorted favorite movie map
      */
@@ -93,6 +97,7 @@ public class CollectionProcessing {
 
     /**
      * sort map
+     *
      * @param favoriteMovies favorite movie map
      * @return sorted favorite movie map
      */
@@ -110,6 +115,7 @@ public class CollectionProcessing {
 
     /**
      * get value from map with default
+     *
      * @param favoriteMovies favorite movie map
      * @return favorite movie
      */
@@ -119,6 +125,7 @@ public class CollectionProcessing {
 
     /**
      * remove entry from map
+     *
      * @param favoriteMovies favorite movie map
      * @param name           friend name
      * @param movie          favorite movie
@@ -132,6 +139,7 @@ public class CollectionProcessing {
 
     /**
      * replace all values in map
+     *
      * @param favoriteMovies favorite movie map
      * @return modified favorite movie map
      */
@@ -142,6 +150,7 @@ public class CollectionProcessing {
 
     /**
      * merge two maps
+     *
      * @param friendMovies friend favorite movie map
      * @param familyMovies family favorite movie map
      * @return merged favorite movie map
@@ -157,6 +166,7 @@ public class CollectionProcessing {
 
     /**
      * count elements in map
+     *
      * @param favoriteMovies favorite movie map
      * @return count of favorite movies
      */

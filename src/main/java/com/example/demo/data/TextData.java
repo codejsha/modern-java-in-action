@@ -7,5 +7,5 @@ public class TextData {
             " Nel   mezzo del cammin  di nostra  vita ",
             "mi  ritrovai in una  selva oscura",
             " che la  dritta via era   smarrita "
-            );
+    );
 }

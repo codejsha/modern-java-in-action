@@ -28,6 +28,7 @@ public class FilteringSpecialMenu {
 
     /**
      * filtering dishes with calories less than 320
+     *
      * @param menu dish list
      * @return filtered dish list
      */
@@ -39,6 +40,7 @@ public class FilteringSpecialMenu {
 
     /**
      * filtering dishes with calories less than 320
+     *
      * @param menu dish list
      * @return filtered dish list
      */
@@ -50,6 +52,7 @@ public class FilteringSpecialMenu {
 
     /**
      * filtering dishes with calories upper more than 300
+     *
      * @param menu dish list
      * @return filtered dish list
      */
@@ -61,6 +64,7 @@ public class FilteringSpecialMenu {
 
     /**
      * filtering dishes with calories upper more than 300 (limit 3)
+     *
      * @param menu dish list
      * @return filtered dish list
      */
@@ -73,6 +77,7 @@ public class FilteringSpecialMenu {
 
     /**
      * filtering dishes with calories upper more than 300 (skip first 2)
+     *
      * @param menu dish list
      * @return filtered dish list
      */

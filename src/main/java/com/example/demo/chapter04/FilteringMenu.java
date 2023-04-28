@@ -18,6 +18,7 @@ public class FilteringMenu {
 
     /**
      * filtering high calorie dishes (limit 3)
+     *
      * @param menu dish list
      * @return filtered list of dish names
      */

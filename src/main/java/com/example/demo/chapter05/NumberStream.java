@@ -19,6 +19,7 @@ public class NumberStream {
 
     /**
      * generate even numbers
+     *
      * @param start start bound
      * @param end   end bound
      * @return even number list
@@ -32,6 +33,7 @@ public class NumberStream {
 
     /**
      * generate pythagorean triple
+     *
      * @param start start bound
      * @param end   end bound
      * @return pythagorean triples
@@ -49,6 +51,7 @@ public class NumberStream {
 
     /**
      * generate pythagorean triple
+     *
      * @param start start bound
      * @param end   end bound
      * @return pythagorean triples

@@ -24,6 +24,7 @@ public class PartitioningMenu {
 
     /**
      * Dishes partitioned by vegetarian
+     *
      * @param menu menu list
      * @return menu partitioned by vegetarian
      */
@@ -34,6 +35,7 @@ public class PartitioningMenu {
 
     /**
      * Vegetarian dishes by type
+     *
      * @param menu menu list
      * @return vegetarian dishes by type
      */
@@ -44,6 +46,7 @@ public class PartitioningMenu {
 
     /**
      * Most caloric dishes partitioned by vegetarian
+     *
      * @param menu menu list
      * @return most caloric dishes partitioned by vegetarian
      */

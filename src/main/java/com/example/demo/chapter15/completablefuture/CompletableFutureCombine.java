@@ -1,4 +1,4 @@
-package com.example.demo.chapter15;
+package com.example.demo.chapter15.completablefuture;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,16 +7,18 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class CompletableFutureComplete {
+public class CompletableFutureCombine {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         var executorService = Executors.newFixedThreadPool(10);
         var x = 1337;
 
         var a = new CompletableFuture<Integer>();
+        var b = new CompletableFuture<Integer>();
+        var c = a.thenCombine(b, Integer::sum);
         executorService.submit(() -> a.complete(f(x)));
-        var b = g(x);
-        log.info(String.valueOf(a.get() + b));
+        executorService.submit(() -> b.complete(g(x)));
 
+        log.info(String.valueOf(c.get()));
         executorService.shutdown();
     }
 

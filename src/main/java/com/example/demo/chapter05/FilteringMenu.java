@@ -18,6 +18,7 @@ public class FilteringMenu {
 
     /**
      * filtering vegetarian dishes
+     *
      * @param menu dish list
      * @return filtered dish list
      */

@@ -17,6 +17,7 @@ public class PrimitiveStream {
 
     /**
      * sum of calories in menu
+     *
      * @param menu menu list
      * @return sum of calories
      */
@@ -28,6 +29,7 @@ public class PrimitiveStream {
 
     /**
      * max of calories in menu
+     *
      * @param menu menu list
      * @return max of calories
      */

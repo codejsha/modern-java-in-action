@@ -13,7 +13,7 @@ import java.util.function.Predicate;
 @Slf4j
 public class FilteringAppleAdvanced {
     public static void main(String[] args) {
-        var inventory = AppleData.APPLE_LIST;
+        var inventory = new ArrayList<>(AppleData.APPLE_LIST);
 
         log.info("Heavy apples: {}", filterApples(inventory,
                 (Apple apple) -> apple.weight() > 150));
@@ -30,6 +30,7 @@ public class FilteringAppleAdvanced {
 
     /**
      * filtering method for predicate
+     *
      * @param inventory apple list
      * @param predicate predicate
      * @return filtered apple list

@@ -1,4 +1,4 @@
-package com.example.demo.chapter15;
+package com.example.demo.chapter15.executorservice;
 
 import lombok.extern.slf4j.Slf4j;
 

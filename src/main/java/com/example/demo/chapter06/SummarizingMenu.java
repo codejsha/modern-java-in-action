@@ -25,6 +25,7 @@ public class SummarizingMenu {
 
     /**
      * summarize total calories in menu
+     *
      * @param menu menu list
      * @return total calories
      */
@@ -35,6 +36,7 @@ public class SummarizingMenu {
 
     /**
      * calculate average calories in menu
+     *
      * @param menu menu list
      * @return average calories
      */
@@ -45,6 +47,7 @@ public class SummarizingMenu {
 
     /**
      * reduce min calories in menu
+     *
      * @param menu menu list
      * @return min calories
      */
@@ -57,6 +60,7 @@ public class SummarizingMenu {
 
     /**
      * reduce max calories in menu
+     *
      * @param menu menu list
      * @return max calories
      */
@@ -69,6 +73,7 @@ public class SummarizingMenu {
 
     /**
      * summarize info in menu
+     *
      * @param menu menu list
      * @return summary info
      */
@@ -79,6 +84,7 @@ public class SummarizingMenu {
 
     /**
      * joining menu
+     *
      * @param menu menu list
      * @return menu string
      */

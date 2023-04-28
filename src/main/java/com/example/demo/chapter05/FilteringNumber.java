@@ -23,6 +23,7 @@ public class FilteringNumber {
 
     /**
      * filtering unique even numbers
+     *
      * @param numbers number list
      * @return filtered number list
      */
@@ -35,6 +36,7 @@ public class FilteringNumber {
 
     /**
      * filtering numbers
+     *
      * @param numbers   number list
      * @param predicate predicate
      * @return filtered number list

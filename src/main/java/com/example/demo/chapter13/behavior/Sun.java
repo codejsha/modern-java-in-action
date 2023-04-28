@@ -1,9 +1,9 @@
 package com.example.demo.chapter13.behavior;
 
 public class Sun implements Movable, Rotatable {
-    private int x;
-    private int y;
-    private int rotationAngle;
+    private final int x;
+    private final int y;
+    private final int rotationAngle;
 
     public Sun(int x, int y, int rotationAngle) {
         this.x = x;

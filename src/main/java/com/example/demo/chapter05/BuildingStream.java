@@ -27,6 +27,7 @@ public class BuildingStream {
 
     /**
      * streams of values
+     *
      * @return stream
      */
     public static Stream<String> streamsOfValues() {
@@ -36,6 +37,7 @@ public class BuildingStream {
 
     /**
      * stream from nullable
+     *
      * @return stream
      */
     public static Stream<String> streamFromNullable() {
@@ -45,6 +47,7 @@ public class BuildingStream {
 
     /**
      * streams of arrays
+     *
      * @return stream
      */
     public static Stream<String> streamsFromArrays() {
@@ -54,12 +57,13 @@ public class BuildingStream {
 
     /**
      * unique word count from files
+     *
      * @return unique word count
      */
     public static Integer streamsFromFiles() {
         try (var lines = Files.lines(Paths.get("LICENSE"), StandardCharsets.UTF_8)) {
             return lines
-                    .flatMap(line -> Arrays.stream(line.split("\s")))
+                    .flatMap(line -> Arrays.stream(line.split(" ")))
                     .filter(word -> word.length() > 0)
                     .map(String::toLowerCase)
                     .map(word -> word.replaceAll("[^a-zA-Z0-9]", ""))
@@ -74,6 +78,7 @@ public class BuildingStream {
     /**
      * streams from functions
      * streams of even numbers
+     *
      * @return stream
      */
     public static Stream<Integer> streamsOfEvenNumbers() {
@@ -84,6 +89,7 @@ public class BuildingStream {
     /**
      * streams from functions
      * streams of even numbers
+     *
      * @return stream
      */
     public static Stream<Integer> streamsOfEvenNumbers2() {
@@ -93,6 +99,7 @@ public class BuildingStream {
     /**
      * streams from functions
      * streams of even numbers
+     *
      * @return stream
      */
     public static Stream<Integer> streamsOfMultipleOfFour() {
@@ -103,6 +110,7 @@ public class BuildingStream {
     /**
      * streams from functions
      * streams of random numbers
+     *
      * @return stream
      */
     public static Stream<Double> streamsOfRandomValues() {
@@ -113,6 +121,7 @@ public class BuildingStream {
     /**
      * streams from functions
      * streams of Fibonacci numbers
+     *
      * @return stream
      */
     public static Stream<Integer> streamsOfFibonacciSequence() {

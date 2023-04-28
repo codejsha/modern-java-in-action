@@ -34,6 +34,7 @@ public class GroupingMenu {
 
     /**
      * Dishes grouped by type
+     *
      * @param menu menu list
      * @return menu grouped by type
      */
@@ -44,6 +45,7 @@ public class GroupingMenu {
 
     /**
      * Dishes grouped by caloric level
+     *
      * @param menu menu list
      * @return menu grouped by caloric level
      */
@@ -62,6 +64,7 @@ public class GroupingMenu {
 
     /**
      * Caloric dishes grouped by type
+     *
      * @param menu menu list
      * @return menu grouped by type
      */
@@ -73,6 +76,7 @@ public class GroupingMenu {
 
     /**
      * Dish names grouped by type
+     *
      * @param menu menu list
      * @return menu grouped by type
      */
@@ -84,6 +88,7 @@ public class GroupingMenu {
 
     /**
      * Dish tags grouped by type
+     *
      * @param menu     menu list
      * @param dishTags dish tags
      * @return menu grouped by type
@@ -96,6 +101,7 @@ public class GroupingMenu {
 
     /**
      * Dishes grouped by type and caloric level
+     *
      * @param menu menu list
      * @return menu grouped by type and caloric level
      */
@@ -115,6 +121,7 @@ public class GroupingMenu {
 
     /**
      * Count dishes in groups
+     *
      * @param menu menu list
      * @return count of dishes in groups
      */
@@ -125,6 +132,7 @@ public class GroupingMenu {
 
     /**
      * Most caloric dishes by type
+     *
      * @param menu menu list
      * @return most caloric dishes by type
      */
@@ -136,6 +144,7 @@ public class GroupingMenu {
 
     /**
      * Most caloric dishes by type
+     *
      * @param menu menu list
      * @return most caloric dishes by type
      */
@@ -148,6 +157,7 @@ public class GroupingMenu {
 
     /**
      * Most caloric dishes by type
+     *
      * @param menu menu list
      * @return most caloric dishes by type
      */
@@ -160,6 +170,7 @@ public class GroupingMenu {
 
     /**
      * Sum calories by type
+     *
      * @param menu menu list
      * @return sum calories by type
      */
@@ -171,6 +182,7 @@ public class GroupingMenu {
 
     /**
      * Caloric levels by type
+     *
      * @param menu menu list
      * @return caloric levels by type
      */
@@ -190,6 +202,7 @@ public class GroupingMenu {
 
     /**
      * Caloric levels by type
+     *
      * @param menu menu list
      * @return caloric levels by type
      */

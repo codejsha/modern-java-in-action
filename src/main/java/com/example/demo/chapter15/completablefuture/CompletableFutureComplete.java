@@ -1,19 +1,21 @@
-package com.example.demo.chapter15;
+package com.example.demo.chapter15.completablefuture;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class ExecutorServiceExample {
+public class CompletableFutureComplete {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        var executorService = Executors.newFixedThreadPool(10);
         var x = 1337;
 
-        var executorService = Executors.newFixedThreadPool(2);
-        var y = executorService.submit(() -> f(x));
-        var z = executorService.submit(() -> g(x));
-        log.info("y + z = {}", y.get() + z.get());
+        var a = new CompletableFuture<Integer>();
+        executorService.submit(() -> a.complete(f(x)));
+        var b = g(x);
+        log.info(String.valueOf(a.get() + b));
 
         executorService.shutdown();
     }

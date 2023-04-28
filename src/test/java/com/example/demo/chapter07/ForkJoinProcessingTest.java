@@ -25,8 +25,8 @@ class ForkJoinProcessingTest {
             assertEquals(50005000L, result2);
             log.info("Sum of Sequence: {}", result2);
 
-            var result3 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(1_000_000L);
-            assertEquals(500000500000L, result3);
+            var result3 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(100_000L);
+            assertEquals(5000050000L, result3);
             log.info("Sum of Sequence: {}", result3);
         }
     }

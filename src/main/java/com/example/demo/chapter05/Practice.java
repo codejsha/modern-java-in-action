@@ -28,6 +28,7 @@ public class Practice {
 
     /**
      * 1. Find all transactions in the year 2011 and sort them by value (small to high).
+     *
      * @param transactions transaction list
      * @return filtered transaction list
      */
@@ -40,6 +41,7 @@ public class Practice {
 
     /**
      * 2. What are all the unique cities where the traders work?
+     *
      * @param traders trader list
      * @return unique city list
      */
@@ -52,6 +54,7 @@ public class Practice {
 
     /**
      * 3. Find all traders from Cambridge and sort them by name.
+     *
      * @param transactions transaction list
      * @return filtered trader list
      */
@@ -66,6 +69,7 @@ public class Practice {
 
     /**
      * 4. Return a string of all traders' names sorted alphabetically.
+     *
      * @param traders trader list
      * @return trader name string
      */
@@ -79,6 +83,7 @@ public class Practice {
 
     /**
      * 5. Are any traders based in Milan?
+     *
      * @param traders trader list
      * @return true if any trader is based in Milan
      */
@@ -89,6 +94,7 @@ public class Practice {
 
     /**
      * 6. Print all transactions' values from the traders living in Cambridge.
+     *
      * @param transactions transaction list
      * @return transaction value list
      */
@@ -101,6 +107,7 @@ public class Practice {
 
     /**
      * 7. What's the highest value of all the transactions?
+     *
      * @param transactions transaction list
      * @return highest value
      */
@@ -113,6 +120,7 @@ public class Practice {
 
     /**
      * 8. Find the transaction with the smallest value.
+     *
      * @param transactions transaction list
      * @return smallest value
      */

@@ -20,6 +20,7 @@ public class ParallelProcessing {
 
     /**
      * Sum by sequential stream
+     *
      * @param config config
      * @return sum
      */
@@ -32,6 +33,7 @@ public class ParallelProcessing {
 
     /**
      * Sum by parallel stream
+     *
      * @param config config
      * @return sum
      */
@@ -45,6 +47,7 @@ public class ParallelProcessing {
 
     /**
      * Sum of range by sequential stream
+     *
      * @param config config
      * @return sum
      */
@@ -56,6 +59,7 @@ public class ParallelProcessing {
 
     /**
      * Sum of range by parallel stream
+     *
      * @param config config
      * @return sum
      */

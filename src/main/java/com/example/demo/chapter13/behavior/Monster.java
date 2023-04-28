@@ -1,11 +1,11 @@
 package com.example.demo.chapter13.behavior;
 
 public class Monster implements Movable, Rotatable, Resizable {
-    private int x;
-    private int y;
-    private int width;
-    private int height;
-    private int rotationAngle;
+    private final int x;
+    private final int y;
+    private final int width;
+    private final int height;
+    private final int rotationAngle;
 
     public Monster(int x, int y, int width, int height, int rotationAngle) {
         this.x = x;

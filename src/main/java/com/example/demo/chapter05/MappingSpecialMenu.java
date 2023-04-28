@@ -20,6 +20,7 @@ public class MappingSpecialMenu {
 
     /**
      * mapping dish names
+     *
      * @param menu dish list
      * @return mapped list
      */
@@ -31,6 +32,7 @@ public class MappingSpecialMenu {
 
     /**
      * length of dish names
+     *
      * @param menu dish list
      * @return mapped list
      */
@@ -43,6 +45,7 @@ public class MappingSpecialMenu {
 
     /**
      * unique characters of dish names
+     *
      * @param menu dish list
      * @return flat mapped list
      */

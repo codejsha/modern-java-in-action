@@ -18,7 +18,7 @@ public class FilteringList {
 
         // each apple
         inventory.stream()
-                .filter((apple) -> Color.GREEN.equals(apple.color()))
+                .filter(apple -> Color.GREEN.equals(apple.color()))
                 .forEach(apple -> log.info("Green apple: {}", apple));
 
         // each apple's weight
@@ -27,23 +27,25 @@ public class FilteringList {
 
     /**
      * filtering green apples
+     *
      * @param inventory apple list
      * @return filtered apple list
      */
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
         return inventory.stream()
-                .filter((apple) -> Color.GREEN.equals(apple.color()))
+                .filter(apple -> Color.GREEN.equals(apple.color()))
                 .collect(Collectors.toList());
     }
 
     /**
      * each green apple's weight
+     *
      * @param inventory apple list
      * @return filtered list of apple's weight
      */
     public static List<Integer> eachGreenAppleWeight(List<Apple> inventory) {
         return inventory.stream()
-                .filter((apple) -> Color.GREEN.equals(apple.color()))
+                .filter(apple -> Color.GREEN.equals(apple.color()))
                 .map(Apple::weight)
                 .collect(Collectors.toList());
     }

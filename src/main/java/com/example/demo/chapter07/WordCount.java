@@ -18,6 +18,7 @@ public class WordCount {
 
     /**
      * Count words in sentence iteratively
+     *
      * @param sentence sentence
      * @return word count
      */
@@ -41,6 +42,7 @@ public class WordCount {
 
     /**
      * Count words in sentence using stream
+     *
      * @param sentence sentence
      * @return word count
      */
@@ -52,6 +54,7 @@ public class WordCount {
 
     /**
      * Word counter
+     *
      * @param counter   counting the number of words
      * @param lastSpace whether the character is a space or not
      */

@@ -21,6 +21,7 @@ public class ReducingMenu {
 
     /**
      * calculate total calories in menu
+     *
      * @param menu menu list
      * @return total calories
      */
@@ -31,6 +32,7 @@ public class ReducingMenu {
 
     /**
      * calculate total calories in menu
+     *
      * @param menu menu list
      * @return total calories
      */
@@ -41,6 +43,7 @@ public class ReducingMenu {
 
     /**
      * calculate total calories in menu
+     *
      * @param menu menu list
      * @return total calories
      */
@@ -52,6 +55,7 @@ public class ReducingMenu {
 
     /**
      * calculate total calories in menu
+     *
      * @param menu menu list
      * @return total calories
      */

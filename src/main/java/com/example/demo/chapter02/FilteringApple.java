@@ -65,6 +65,7 @@ public class FilteringApple {
 
     /**
      * filtering method for predicate
+     *
      * @param inventory apple list
      * @param predicate predicate
      * @return filtered apple list

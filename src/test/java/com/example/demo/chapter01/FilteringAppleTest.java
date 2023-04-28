@@ -13,12 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
 class FilteringAppleTest {
-    private FilteringApple filteringApple;
     private List<Apple> inventory;
 
     @BeforeEach
     void setUp() {
-        filteringApple = new FilteringApple();
         inventory = AppleTestData.APPLE_LIST;
     }
 
@@ -38,31 +36,31 @@ class FilteringAppleTest {
 
     @Test
     void testFilterGreenApples() {
-        var apples = filteringApple.filterGreenApples(inventory);
+        var apples = FilteringApple.filterGreenApples(inventory);
         assertGreenApples(apples);
     }
 
     @Test
     void testFilterGreenApples2() {
-        var apples = filteringApple.filterGreenApples2(inventory);
+        var apples = FilteringApple.filterGreenApples2(inventory);
         assertGreenApples(apples);
     }
 
     @Test
     void testFilterHeavyApples() {
-        var apples = filteringApple.filterHeavyApples(inventory);
+        var apples = FilteringApple.filterHeavyApples(inventory);
         assertHeavyApples(apples);
     }
 
     @Test
     void testFilterHeavyApples2() {
-        var apples = filteringApple.filterHeavyApples2(inventory);
+        var apples = FilteringApple.filterHeavyApples2(inventory);
         assertHeavyApples(apples);
     }
 
     @Test
     void testFilterWeirdApples() {
-        var apples = filteringApple.filterWeirdApples(inventory);
+        var apples = FilteringApple.filterWeirdApples(inventory);
         assertNotNull(apples);
         assertEquals(0, apples.size());
         // apples.forEach(apple -> assertTrue(apple.getWeight() < 80 || Color.BROWN.equals(apple.getColor())));

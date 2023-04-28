@@ -30,6 +30,7 @@ public class FindingMenu {
 
     /**
      * finding any vegetarian dish
+     *
      * @param menu dish list
      * @return true if any vegetarian dish exists
      */
@@ -40,6 +41,7 @@ public class FindingMenu {
 
     /**
      * finding all vegetarian dishes
+     *
      * @param menu dish list
      * @return true if all dishes are vegetarian
      */
@@ -50,6 +52,7 @@ public class FindingMenu {
 
     /**
      * finding no vegetarian dishes
+     *
      * @param menu dish list
      * @return true if no vegetarian dishes exist
      */
@@ -60,6 +63,7 @@ public class FindingMenu {
 
     /**
      * finding vegetarian dish
+     *
      * @param menu dish list
      * @return any vegetarian dish
      */
@@ -71,6 +75,7 @@ public class FindingMenu {
 
     /**
      * finding vegetarian dish
+     *
      * @param menu dish list
      * @return first vegetarian dish
      */
