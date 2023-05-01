@@ -23,9 +23,6 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 15. Concepts behind CompletableFuture and reactive programming | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter15)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter15))
 - Chapter 16. CompletableFuture: composable asynchronous programming | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter16)
 - Chapter 17. Reactive programming | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter17)
-
-(work in progress)
-
 - Chapter 18. Thinking functionally
 - Chapter 19. Functional programming techniques
 - Chapter 20. Blending OOP and FP: Comparing Java and Scala
