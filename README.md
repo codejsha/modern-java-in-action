@@ -21,10 +21,10 @@ This repository contains the code examples from the book [Modern Java in Action]
 - Chapter 13. Default methods | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter13)
 - Chapter 14. The Java Module System
 - Chapter 15. Concepts behind CompletableFuture and reactive programming | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter15)([test](https://github.com/codejsha/modern-java-in-action/tree/main/src/test/java/com/example/demo/chapter15))
+- Chapter 16. CompletableFuture: composable asynchronous programming | [java](https://github.com/codejsha/modern-java-in-action/tree/main/src/main/java/com/example/demo/chapter16)
 
 (work in progress)
 
-- Chapter 16. CompletableFuture: composable asynchronous programming
 - Chapter 17. Reactive programming
 - Chapter 18. Thinking functionally
 - Chapter 19. Functional programming techniques
