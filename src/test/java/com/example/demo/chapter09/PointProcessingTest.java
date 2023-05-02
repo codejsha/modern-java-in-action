@@ -1,6 +1,6 @@
 package com.example.demo.chapter09;
 
-import com.example.demo.util.CollectionUtil;
+import com.example.demo.util.CollectionUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,7 +30,7 @@ class PointProcessingTest {
         var p2 = new PointProcessing.Point(10, 10);
         var p3 = new PointProcessing.Point(15, 15);
         var points = List.of(p1, p2, p3);
-        points = CollectionUtil.createModifiableList(points);
+        points = CollectionUtils.createModifiableList(points);
         var movedPoints = PointProcessing.Point.moveAllBy(points, 10, 10);
         assertEquals(15, movedPoints.get(0).x());
         assertEquals(15, movedPoints.get(0).y());

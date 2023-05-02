@@ -1,6 +1,6 @@
 package com.example.demo.chapter16.shop.exception;
 
-import com.example.demo.util.ThreadUtil;
+import com.example.demo.util.ThreadUtils;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
@@ -43,7 +43,7 @@ public class Shop {
     }
 
     private double calculatePrice(String product) {
-        ThreadUtil.delay();
+        ThreadUtils.delay();
         throw new RuntimeException("product not available");
 
         // return ThreadUtil.format(random.nextDouble() * product.charAt(0) + product.charAt(1));

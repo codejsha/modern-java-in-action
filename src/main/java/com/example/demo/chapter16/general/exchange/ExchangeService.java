@@ -1,6 +1,6 @@
 package com.example.demo.chapter16.general.exchange;
 
-import com.example.demo.util.ThreadUtil;
+import com.example.demo.util.ThreadUtils;
 
 public class ExchangeService {
     public static final double DEFAULT_RATE = 1.35;
@@ -10,7 +10,7 @@ public class ExchangeService {
     }
 
     private static double getRateWithDelay(Money source, Money destination) {
-        ThreadUtil.delay();
+        ThreadUtils.delay();
         return destination.rate / source.rate;
     }
 

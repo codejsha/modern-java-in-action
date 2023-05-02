@@ -1,6 +1,6 @@
 package com.example.demo.chapter16.discount;
 
-import com.example.demo.util.ThreadUtil;
+import com.example.demo.util.ThreadUtils;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
@@ -34,7 +34,7 @@ public class Shop {
     }
 
     private double calculatePrice(String product) {
-        ThreadUtil.delay();
-        return ThreadUtil.format(random.nextDouble() * product.charAt(0) + product.charAt(1));
+        ThreadUtils.delay();
+        return ThreadUtils.format(random.nextDouble() * product.charAt(0) + product.charAt(1));
     }
 }

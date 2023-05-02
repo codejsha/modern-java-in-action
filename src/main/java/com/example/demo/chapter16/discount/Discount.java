@@ -1,6 +1,6 @@
 package com.example.demo.chapter16.discount;
 
-import com.example.demo.util.ThreadUtil;
+import com.example.demo.util.ThreadUtils;
 
 public class Discount {
     public static String applyDiscount(Quote quote) {
@@ -8,8 +8,8 @@ public class Discount {
     }
 
     private static double apply(double price, Code code) {
-        ThreadUtil.delay();
-        return ThreadUtil.format(price * (100 - code.percentage) / 100);
+        ThreadUtils.delay();
+        return ThreadUtils.format(price * (100 - code.percentage) / 100);
     }
 
     public enum Code {

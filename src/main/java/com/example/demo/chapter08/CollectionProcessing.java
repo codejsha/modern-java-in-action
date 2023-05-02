@@ -3,7 +3,7 @@ package com.example.demo.chapter08;
 import com.example.demo.data.PeopleData;
 import com.example.demo.data.TransactionData;
 import com.example.demo.record.Transaction;
-import com.example.demo.util.CollectionUtil;
+import com.example.demo.util.CollectionUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
@@ -20,9 +20,9 @@ public class CollectionProcessing {
         var familyMovies = PeopleData.FAMILY_FAVORITE_MOVIES;
 
         log.info("Exclude transactions that occurred in 2011: {}",
-                removeTransactionIn2011(CollectionUtil.createModifiableList(transactions)));
+                removeTransactionIn2011(CollectionUtils.createModifiableList(transactions)));
         log.info("Replace all characters in reference codes with uppercase: {}",
-                replaceAllCharactersWithUppercase(CollectionUtil.createModifiableList(codes)));
+                replaceAllCharactersWithUppercase(CollectionUtils.createModifiableList(codes)));
         log.info("Iterate over friends: {}", forEachFriends(friends));
         log.info("Sort favorite movies by key: {}", sortFavoriteMoviesByKey(friendMovies));
         log.info("Sort favorite movies by value: {}", sortFavoriteMoviesByValue(friendMovies));
@@ -34,10 +34,10 @@ public class CollectionProcessing {
         var friend2 = "Raphael";
         var movie = "Star Wars";
         log.info("Remove favorite movie: {}", removeFavoriteMovie(
-                CollectionUtil.createModifiableMap(friendMovies), friend2, movie));
+                CollectionUtils.createModifiableMap(friendMovies), friend2, movie));
 
         log.info("Replace all movies with uppercase: {}", replaceAllMoviesWithUppercase(
-                CollectionUtil.createModifiableMap(friendMovies)));
+                CollectionUtils.createModifiableMap(friendMovies)));
 
         var everyoneMovies = mergeFavoriteMovies(friendMovies, familyMovies);
         log.info("Merge favorite movies: {}", everyoneMovies);

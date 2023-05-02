@@ -2,7 +2,7 @@ package com.example.demo.util;
 
 import java.util.*;
 
-public class CollectionUtil {
+public class CollectionUtils {
     public static <T> List<T> createModifiableList(List<T> list) {
         return new ArrayList<>(list);
     }

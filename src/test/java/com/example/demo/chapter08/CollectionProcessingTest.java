@@ -3,7 +3,7 @@ package com.example.demo.chapter08;
 import com.example.demo.data.PeopleTestData;
 import com.example.demo.data.TransactionTestData;
 import com.example.demo.record.Transaction;
-import com.example.demo.util.CollectionUtil;
+import com.example.demo.util.CollectionUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,7 +33,7 @@ class CollectionProcessingTest {
     @Test
     void testRemoveTransactionIn2011() {
         var result = CollectionProcessing.removeTransactionIn2011(
-                CollectionUtil.createModifiableList(transactions));
+                CollectionUtils.createModifiableList(transactions));
         assertNotNull(result);
         assertEquals(4, result.size());
         result.forEach(transaction -> {
@@ -45,7 +45,7 @@ class CollectionProcessingTest {
     @Test
     void testReplaceAllCharactersWithUppercase() {
         var result = CollectionProcessing.replaceAllCharactersWithUppercase(
-                CollectionUtil.createModifiableList(codes));
+                CollectionUtils.createModifiableList(codes));
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(code -> {
@@ -94,7 +94,7 @@ class CollectionProcessingTest {
         var friend = "Raphael";
         var movie = "Star Wars";
         var result = CollectionProcessing.removeFavoriteMovie(
-                CollectionUtil.createModifiableMap(friendMovies), friend, movie);
+                CollectionUtils.createModifiableMap(friendMovies), friend, movie);
         assertNotNull(result);
         assertEquals(2, result.size());
         assertNull(result.get("Raphael"));
@@ -104,7 +104,7 @@ class CollectionProcessingTest {
     @Test
     void testReplaceAllMoviesWithUppercase() {
         var result = CollectionProcessing.replaceAllMoviesWithUppercase(
-                CollectionUtil.createModifiableMap(friendMovies));
+                CollectionUtils.createModifiableMap(friendMovies));
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach((key, value) -> {
