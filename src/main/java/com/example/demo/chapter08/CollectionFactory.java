@@ -9,16 +9,16 @@ import java.util.Set;
 @Slf4j
 public class CollectionFactory {
     public static void main(String[] args) {
-        var list = createList();
+        final var list = createList();
         log.info("List: {}", list);
 
-        var set = createSet();
+        final var set = createSet();
         log.info("Set: {}", set);
 
-        var map = createMap();
+        final var map = createMap();
         log.info("Map: {}", map);
 
-        var map2 = createMap2();
+        final var map2 = createMap2();
         log.info("Map: {}", map2);
     }
 

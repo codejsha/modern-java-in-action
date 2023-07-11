@@ -37,13 +37,13 @@ class PropertyProcessingTest {
 
     @Test
     void testStringToOptionalInt() {
-        var result1 = PropertyProcessing.stringToOptionalInt(props.getProperty("a"));
+        final var result1 = PropertyProcessing.stringToOptionalInt(props.getProperty("a"));
         assertEquals(5, result1.orElse(0));
 
-        var result2 = PropertyProcessing.stringToOptionalInt(props.getProperty("b"));
+        final var result2 = PropertyProcessing.stringToOptionalInt(props.getProperty("b"));
         assertEquals(Optional.empty(), result2);
 
-        var result3 = PropertyProcessing.stringToOptionalInt(props.getProperty("c"));
+        final var result3 = PropertyProcessing.stringToOptionalInt(props.getProperty("c"));
         assertEquals(-3, result3.orElse(0));
     }
 }

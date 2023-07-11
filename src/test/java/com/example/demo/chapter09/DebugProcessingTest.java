@@ -16,8 +16,8 @@ class DebugProcessingTest {
 
     @Test
     void testFilterNumbers() {
-        var numbers = List.of(2, 3, 4, 5);
-        var result = DebugProcessing.filterNumbers(numbers);
+        final var numbers = List.of(2, 3, 4, 5);
+        final var result = DebugProcessing.filterNumbers(numbers);
         assertNotNull(result);
         assertEquals(2, result.size());
         assertTrue(result.contains(20));

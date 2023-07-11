@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 
 public class GeneralLinkedList {
     public static void main(String[] args) {
-        MyList<Integer> l = new MyLinkedList<>(5, new MyLinkedList<>(10, new Empty<>()));
+        final MyList<Integer> l = new MyLinkedList<>(5, new MyLinkedList<>(10, new Empty<>()));
         System.out.println(l.head());
     }
 

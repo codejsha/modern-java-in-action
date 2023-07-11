@@ -5,8 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ChainOfResponsibilityPatternOld {
     public static void main(String[] args) {
-        var processing1 = new HeaderTextProcessing();
-        var processing2 = new SpellCheckerProcessing();
+        final var processing1 = new HeaderTextProcessing();
+        final var processing2 = new SpellCheckerProcessing();
         processing1.setSuccessor(processing2);
 
         log.info(processing1.handle("Aren't labdas really sexy?!!"));
@@ -20,7 +20,7 @@ public class ChainOfResponsibilityPatternOld {
         }
 
         public T handle(T input) {
-            var result = handleWork(input);
+            final var result = handleWork(input);
             if (successor != null) {
                 return successor.handle(result);
             }

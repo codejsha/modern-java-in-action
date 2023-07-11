@@ -24,7 +24,7 @@ class FactoryPatternTest {
 
     @Test
     void testCreateProduct() {
-        var product = FactoryPattern.ProductFactory.createProduct("loan");
+        final var product = FactoryPattern.ProductFactory.createProduct("loan");
         assertNotNull(product);
         assertEquals("Loan", product.getClass().getSimpleName());
         log.info("Product: {}", product.getClass().getSimpleName());

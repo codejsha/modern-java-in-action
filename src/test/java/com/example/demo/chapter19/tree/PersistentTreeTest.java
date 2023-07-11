@@ -32,8 +32,8 @@ class PersistentTreeTest {
     @Test
     void lookupKeys() {
         // Act
-        var raoulKey = lookup("Raoul", -1, tree);
-        var jeffKey = lookup("Jeff", -1, tree);
+        final var raoulKey = lookup("Raoul", -1, tree);
+        final var jeffKey = lookup("Jeff", -1, tree);
         // Assert
         assertEquals(23, raoulKey); // found
         assertEquals(-1, jeffKey);  // not found
@@ -45,9 +45,9 @@ class PersistentTreeTest {
     @Test
     void updateChangeStatus() {
         // Act
-        var updatedTree1 = updateFunctionApproach("Jeff", 80, tree);
-        var updatedTree2 = update("Jim", 40, tree);
-        var updatedTree3 = updateFunctionApproach("Jeff", 80, tree);
+        final var updatedTree1 = updateFunctionApproach("Jeff", 80, tree);
+        final var updatedTree2 = update("Jim", 40, tree);
+        final var updatedTree3 = updateFunctionApproach("Jeff", 80, tree);
 
         // Assert
         assertEquals(80, lookup("Jeff", -1, updatedTree3)); // found
@@ -60,8 +60,8 @@ class PersistentTreeTest {
     @Test
     void updateNotChangeStatus() {
         // Act
-        var updatedTree1 = updateFunctionApproach("Jeff", 80, tree);
-        var updatedTree2 = update("Jim", 40, tree);
+        final var updatedTree1 = updateFunctionApproach("Jeff", 80, tree);
+        final var updatedTree2 = update("Jim", 40, tree);
 
         // Assert
         assertEquals(-1, lookup("Jeff", -1, updatedTree2)); // not found
@@ -71,7 +71,7 @@ class PersistentTreeTest {
     @Test
     void updateUsingFunctionalApproach1() {
         // Act
-        var updatedTree = updateFunctionApproach("Jeff", 80, tree);
+        final var updatedTree = updateFunctionApproach("Jeff", 80, tree);
         // Assert
         assertEquals(80, lookup("Jeff", -1, updatedTree));
     }
@@ -79,7 +79,7 @@ class PersistentTreeTest {
     @Test
     void updateUsingFunctionalApproach2() {
         // Act
-        var updatedTree = updateFunctionApproach2("Jeff", 80, tree);
+        final var updatedTree = updateFunctionApproach2("Jeff", 80, tree);
         // Assert
         assertEquals(80, lookup("Jeff", -1, updatedTree));
     }

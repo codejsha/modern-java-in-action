@@ -7,7 +7,7 @@ import java.util.List;
 @Slf4j
 public class DebugProcessing {
     public static void main(String[] args) {
-        var numbers = List.of(2, 3, 4, 5);
+        final var numbers = List.of(2, 3, 4, 5);
 
         log.info("Filtering numbers: {}", filterNumbers(numbers));
     }

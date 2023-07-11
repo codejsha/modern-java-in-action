@@ -1,7 +1,7 @@
 package com.example.demo.chapter02;
 
 import com.example.demo.data.AppleTestData;
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +22,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void testFilterHeavyApples() {
-        var apples = FilteringAppleAdvanced.filterApples(inventory,
+        final var apples = FilteringAppleAdvanced.filterApples(inventory,
                 apple -> apple.weight() > 150);
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -32,7 +32,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void testFilterGreenApples() {
-        var apples = FilteringAppleAdvanced.filterApples(inventory,
+        final var apples = FilteringAppleAdvanced.filterApples(inventory,
                 apple -> Color.GREEN.equals(apple.color()));
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -42,7 +42,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void testFilterRedApples() {
-        var apples = FilteringAppleAdvanced.filterApples(inventory,
+        final var apples = FilteringAppleAdvanced.filterApples(inventory,
                 apple -> Color.RED.equals(apple.color()));
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
@@ -52,7 +52,7 @@ class FilteringAppleAdvancedTest {
 
     @Test
     void testFilterRedAndHeavyApples() {
-        var apples = FilteringAppleAdvanced.filterApples(inventory,
+        final var apples = FilteringAppleAdvanced.filterApples(inventory,
                 apple -> Color.RED.equals(apple.color()) && apple.weight() > 150);
         assertNotNull(apples);
         assertEquals(0, apples.size());

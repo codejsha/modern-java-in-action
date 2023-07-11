@@ -7,8 +7,8 @@ import java.util.function.IntConsumer;
 @Slf4j
 public class CallbackStyleExample {
     public static void main(String[] args) {
-        var x = 1337;
-        var result = new Result();
+        final var x = 1337;
+        final var result = new Result();
 
         f(x, y -> {
             result.left = y;

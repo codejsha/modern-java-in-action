@@ -61,7 +61,7 @@ public class BuildingStream {
      * @return unique word count
      */
     public static Integer streamsFromFiles() {
-        try (var lines = Files.lines(Paths.get("LICENSE"), StandardCharsets.UTF_8)) {
+        try (final var lines = Files.lines(Paths.get("LICENSE"), StandardCharsets.UTF_8)) {
             return lines
                     .flatMap(line -> Arrays.stream(line.split(" ")))
                     .filter(word -> word.length() > 0)
@@ -139,8 +139,8 @@ public class BuildingStream {
 
         @Override
         public int getAsInt() {
-            var previousValue = this.previous;
-            var nextValue = this.previous + this.current;
+            final var previousValue = this.previous;
+            final var nextValue = this.previous + this.current;
             this.previous = this.current;
             this.current = nextValue;
             return previousValue;

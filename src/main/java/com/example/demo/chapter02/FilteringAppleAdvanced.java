@@ -1,7 +1,7 @@
 package com.example.demo.chapter02;
 
 import com.example.demo.data.AppleData;
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +13,7 @@ import java.util.function.Predicate;
 @Slf4j
 public class FilteringAppleAdvanced {
     public static void main(String[] args) {
-        var inventory = new ArrayList<>(AppleData.APPLE_LIST);
+        final var inventory = new ArrayList<>(AppleData.APPLE_LIST);
 
         log.info("Heavy apples: {}", filterApples(inventory,
                 (Apple apple) -> apple.weight() > 150));
@@ -36,7 +36,7 @@ public class FilteringAppleAdvanced {
      * @return filtered apple list
      */
     public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> predicate) {
-        var result = new ArrayList<Apple>();
+        final var result = new ArrayList<Apple>();
         for (var apple : inventory) {
             if (predicate.test(apple)) {
                 result.add(apple);

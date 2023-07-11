@@ -25,8 +25,8 @@ public class Shop {
     }
 
     public String getPrice(String product) {
-        var price = calculatePrice(product);
-        var code = Discount.Code.values()[random.nextInt(Discount.Code.values().length)];
+        final var price = calculatePrice(product);
+        final var code = Discount.Code.values()[random.nextInt(Discount.Code.values().length)];
         return String.format("%s:%.2f:%s", name, price, code);
     }
 

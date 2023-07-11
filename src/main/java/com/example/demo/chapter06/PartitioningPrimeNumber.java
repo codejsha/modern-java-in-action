@@ -53,7 +53,7 @@ public class PartitioningPrimeNumber {
      * @return true if candidate number is prime
      */
     private static boolean isPrime(int candidate) {
-        var candidateRoot = (int) Math.sqrt(candidate);
+        final var candidateRoot = (int) Math.sqrt(candidate);
         return IntStream.rangeClosed(2, candidateRoot)
                 .noneMatch(i -> candidate % i == 0);
     }
@@ -65,7 +65,7 @@ public class PartitioningPrimeNumber {
      * @return true if candidate number is prime
      */
     private static boolean isPrime(List<Integer> primes, int candidate) {
-        var candidateRoot = (int) Math.sqrt(candidate);
+        final var candidateRoot = (int) Math.sqrt(candidate);
         return primes.stream()
                 .takeWhile(i -> i <= candidateRoot)
                 .noneMatch(i -> candidate % i == 0);

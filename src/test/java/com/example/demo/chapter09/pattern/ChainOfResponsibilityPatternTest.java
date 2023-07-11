@@ -17,10 +17,10 @@ class ChainOfResponsibilityPatternTest {
 
     @Test
     void testChainProcessing() {
-        UnaryOperator<String> headerProcessing = (text) -> "From Raoul, Mario and Alan: " + text;
-        UnaryOperator<String> spellCheckerProcessing = (text) -> text.replaceAll("labda", "lambda");
-        var pipeline = headerProcessing.andThen(spellCheckerProcessing);
-        var result = pipeline.apply("Aren't labdas really sexy?!!");
+        final UnaryOperator<String> headerProcessing = (text) -> "From Raoul, Mario and Alan: " + text;
+        final UnaryOperator<String> spellCheckerProcessing = (text) -> text.replaceAll("labda", "lambda");
+        final var pipeline = headerProcessing.andThen(spellCheckerProcessing);
+        final var result = pipeline.apply("Aren't labdas really sexy?!!");
         assertNotNull(result);
         assertEquals("From Raoul, Mario and Alan: Aren't lambdas really sexy?!!", result);
         log.info(result);

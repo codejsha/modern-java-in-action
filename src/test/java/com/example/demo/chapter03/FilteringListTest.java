@@ -1,7 +1,7 @@
 package com.example.demo.chapter03;
 
 import com.example.demo.data.AppleTestData;
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +22,7 @@ class FilteringListTest {
 
     @Test
     void testFilterGreenApples() {
-        var apples = FilteringList.filterGreenApples(inventory);
+        final var apples = FilteringList.filterGreenApples(inventory);
         assertNotNull(apples);
         assertTrue(apples.size() > 0);
         apples.forEach(apple -> assertEquals(Color.GREEN, apple.color()));
@@ -31,7 +31,7 @@ class FilteringListTest {
 
     @Test
     void testEachGreenAppleWeight() {
-        var weights = FilteringList.eachGreenAppleWeight(inventory);
+        final var weights = FilteringList.eachGreenAppleWeight(inventory);
         assertNotNull(weights);
         assertTrue(weights.size() > 0);
         weights.forEach(weight -> assertTrue(weight > 0));

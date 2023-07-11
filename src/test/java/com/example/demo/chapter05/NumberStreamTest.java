@@ -18,7 +18,7 @@ class NumberStreamTest {
 
     @Test
     void testGenerateEvenNumbers() {
-        var result = NumberStream.generateEvenNumbers(START, END);
+        final var result = NumberStream.generateEvenNumbers(START, END);
         assertNotNull(result);
         assertEquals(50, result.size());
         result.forEach(number -> assertEquals(0, number % 2));
@@ -27,13 +27,13 @@ class NumberStreamTest {
 
     @Test
     void testPythagoreanTriple1() {
-        var result = NumberStream.pythagoreanTriple1(START, END);
+        final var result = NumberStream.pythagoreanTriple1(START, END);
         assertNotNull(result);
         assertEquals(5, result.size());
         result.forEach(triple -> {
-            var a = triple.getValue0();
-            var b = triple.getValue1();
-            var c = triple.getValue2();
+            final var a = triple.getValue0();
+            final var b = triple.getValue1();
+            final var c = triple.getValue2();
             assertEquals(c * c, a * a + b * b);
         });
         log.info("Pythagorean triples: {}", result);
@@ -41,13 +41,13 @@ class NumberStreamTest {
 
     @Test
     void testPythagoreanTriple2() {
-        var result = NumberStream.pythagoreanTriple2(START, END);
+        final var result = NumberStream.pythagoreanTriple2(START, END);
         assertNotNull(result);
         assertEquals(5, result.size());
         result.forEach(triple -> {
-            var a = triple.getValue0();
-            var b = triple.getValue1();
-            var c = triple.getValue2();
+            final var a = triple.getValue0();
+            final var b = triple.getValue1();
+            final var c = triple.getValue2();
             assertEquals(c * c, a * a + b * b);
         });
         result.forEach(triple -> assertNotEquals(new Triplet<>(3, 4, 5), triple));

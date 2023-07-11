@@ -32,7 +32,7 @@ class CollectionProcessingTest {
 
     @Test
     void testRemoveTransactionIn2011() {
-        var result = CollectionProcessing.removeTransactionIn2011(
+        final var result = CollectionProcessing.removeTransactionIn2011(
                 CollectionUtils.createModifiableList(transactions));
         assertNotNull(result);
         assertEquals(4, result.size());
@@ -44,7 +44,7 @@ class CollectionProcessingTest {
 
     @Test
     void testReplaceAllCharactersWithUppercase() {
-        var result = CollectionProcessing.replaceAllCharactersWithUppercase(
+        final var result = CollectionProcessing.replaceAllCharactersWithUppercase(
                 CollectionUtils.createModifiableList(codes));
         assertNotNull(result);
         assertEquals(3, result.size());
@@ -56,7 +56,7 @@ class CollectionProcessingTest {
 
     @Test
     void testForEachFriends() {
-        var result = CollectionProcessing.forEachFriends(friends);
+        final var result = CollectionProcessing.forEachFriends(friends);
         assertNotNull(result);
         assertEquals(3, result.size());
         log.info("Iterate over friends: {}", result);
@@ -64,8 +64,8 @@ class CollectionProcessingTest {
 
     @Test
     void testSortFavoriteMoviesByKey() {
-        var result = CollectionProcessing.sortFavoriteMoviesByKey(friendMovies);
-        var orderedList = friendMovies.keySet().stream().sorted().toList();
+        final var result = CollectionProcessing.sortFavoriteMoviesByKey(friendMovies);
+        final var orderedList = friendMovies.keySet().stream().sorted().toList();
         assertNotNull(result);
         assertEquals(orderedList, result.keySet().stream().toList());
         log.info("Sort favorite movies by key: {}", result);
@@ -73,8 +73,8 @@ class CollectionProcessingTest {
 
     @Test
     void testSortFavoriteMoviesByValue() {
-        var result = CollectionProcessing.sortFavoriteMoviesByValue(friendMovies);
-        var orderedList = friendMovies.values().stream().sorted().toList();
+        final var result = CollectionProcessing.sortFavoriteMoviesByValue(friendMovies);
+        final var orderedList = friendMovies.values().stream().sorted().toList();
         assertNotNull(result);
         assertEquals(orderedList, result.values().stream().toList());
         log.info("Sort favorite movies by value: {}", result);
@@ -82,8 +82,8 @@ class CollectionProcessingTest {
 
     @Test
     void testGetFavoriteMoviesWithDefault() {
-        var friend = "Thibaut";
-        var result = CollectionProcessing.getFavoriteMoviesWithDefault(friendMovies, friend);
+        final var friend = "Thibaut";
+        final var result = CollectionProcessing.getFavoriteMoviesWithDefault(friendMovies, friend);
         assertNotNull(result);
         assertEquals("Matrix", result);
         log.info("Get favorite movie with default: name={} move={}", friend, result);
@@ -91,9 +91,9 @@ class CollectionProcessingTest {
 
     @Test
     void testRemoveFavoriteMovie() {
-        var friend = "Raphael";
-        var movie = "Star Wars";
-        var result = CollectionProcessing.removeFavoriteMovie(
+        final var friend = "Raphael";
+        final var movie = "Star Wars";
+        final var result = CollectionProcessing.removeFavoriteMovie(
                 CollectionUtils.createModifiableMap(friendMovies), friend, movie);
         assertNotNull(result);
         assertEquals(2, result.size());
@@ -103,7 +103,7 @@ class CollectionProcessingTest {
 
     @Test
     void testReplaceAllMoviesWithUppercase() {
-        var result = CollectionProcessing.replaceAllMoviesWithUppercase(
+        final var result = CollectionProcessing.replaceAllMoviesWithUppercase(
                 CollectionUtils.createModifiableMap(friendMovies));
         assertNotNull(result);
         assertEquals(3, result.size());
@@ -115,7 +115,7 @@ class CollectionProcessingTest {
 
     @Test
     void testMergeFavoriteMovies() {
-        var result = CollectionProcessing.mergeFavoriteMovies(friendMovies, familyMovies);
+        final var result = CollectionProcessing.mergeFavoriteMovies(friendMovies, familyMovies);
         assertNotNull(result);
         assertEquals(4, result.size());
         assertTrue(result.containsKey("Raphael"));
@@ -127,7 +127,7 @@ class CollectionProcessingTest {
 
     @Test
     void testCountFavoriteMovies() {
-        var result = CollectionProcessing.countFavoriteMovies(
+        final var result = CollectionProcessing.countFavoriteMovies(
                 CollectionProcessing.mergeFavoriteMovies(friendMovies, familyMovies));
         assertNotNull(result);
         assertEquals(3, result.size());

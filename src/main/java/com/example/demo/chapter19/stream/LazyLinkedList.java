@@ -8,15 +8,15 @@ import java.util.function.Supplier;
 public class LazyLinkedList {
     public static void main(String[] args) {
         var numbers = from(2);
-        int two = numbers.head();
-        int three = numbers.tail().head();
-        int four = numbers.tail().tail().head();
+        final int two = numbers.head();
+        final int three = numbers.tail().head();
+        final int four = numbers.tail().tail().head();
         System.out.println(two + " " + three + " " + four);
 
         numbers = from(2);
-        int prime_two = primes(numbers).head();
-        int prime_three = primes(numbers).tail().head();
-        int prime_five = primes(numbers).tail().tail().head();
+        final int prime_two = primes(numbers).head();
+        final int prime_three = primes(numbers).tail().head();
+        final int prime_five = primes(numbers).tail().tail().head();
         System.out.println(prime_two + " " + prime_three + " " + prime_five);
     }
 

@@ -25,7 +25,7 @@ class CacheProcessingTest {
 
     @Test
     void testUpdateDigestTextLines() throws NoSuchAlgorithmException {
-        var result = CacheProcessing.updateDigestTextLines(messageDigest, lines);
+        final var result = CacheProcessing.updateDigestTextLines(messageDigest, lines);
         assertNotNull(result);
         assertEquals(3, result.size());
         log.info("Update message digest for lines: {}", result);

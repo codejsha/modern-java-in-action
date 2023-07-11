@@ -21,7 +21,7 @@ class MappingSpecialMenuTest {
 
     @Test
     void testDishNames() {
-        var result = MappingSpecialMenu.dishNames(menu);
+        final var result = MappingSpecialMenu.dishNames(menu);
         assertNotNull(result);
         assertEquals(5, result.size());
         result.forEach(name -> assertTrue(name.length() > 0));
@@ -30,7 +30,7 @@ class MappingSpecialMenuTest {
 
     @Test
     void testDishNameLengths() {
-        var result = MappingSpecialMenu.dishNameLengths(menu);
+        final var result = MappingSpecialMenu.dishNameLengths(menu);
         assertNotNull(result);
         assertEquals(5, result.size());
         result.forEach(length -> assertTrue(length > 0));
@@ -39,7 +39,7 @@ class MappingSpecialMenuTest {
 
     @Test
     void testUniqueDishNameCharacters() {
-        var result = MappingSpecialMenu.uniqueDishNameCharacters(menu);
+        final var result = MappingSpecialMenu.uniqueDishNameCharacters(menu);
         assertNotNull(result);
         assertEquals(15, result.size());
         result.forEach(character -> assertEquals(1, character.length()));

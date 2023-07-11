@@ -45,7 +45,7 @@ public class BestPriceFinder {
     }
 
     public List<String> findPricesFuture(String product) {
-        List<CompletableFuture<String>> priceFutures = findPricesStream(product)
+        final List<CompletableFuture<String>> priceFutures = findPricesStream(product)
                 .toList();
 
         return priceFutures.stream()

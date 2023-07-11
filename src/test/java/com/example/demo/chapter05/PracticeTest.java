@@ -27,7 +27,7 @@ class PracticeTest {
 
     @Test
     void testExercise1() {
-        var result = Practice.exercise1(transactions);
+        final var result = Practice.exercise1(transactions);
         assertNotNull(result);
         assertEquals(2, result.size());
         result.forEach(tx -> assertEquals(2011, tx.year()));
@@ -37,7 +37,7 @@ class PracticeTest {
 
     @Test
     void testExercise2() {
-        var result = Practice.exercise2(traders);
+        final var result = Practice.exercise2(traders);
         assertNotNull(result);
         assertEquals(2, result.size());
         assertTrue(result.contains("Cambridge"));
@@ -47,7 +47,7 @@ class PracticeTest {
 
     @Test
     void testExercise3() {
-        var result = Practice.exercise3(transactions);
+        final var result = Practice.exercise3(transactions);
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(trader -> assertEquals("Cambridge", trader.city()));
@@ -57,7 +57,7 @@ class PracticeTest {
 
     @Test
     void testExercise4() {
-        var result = Practice.exercise4(traders);
+        final var result = Practice.exercise4(traders);
         assertNotNull(result);
         assertTrue(result.contains("Alan"));
         assertTrue(result.contains("Brian"));
@@ -68,14 +68,14 @@ class PracticeTest {
 
     @Test
     void testExercise5() {
-        var result = Practice.exercise5(traders);
+        final var result = Practice.exercise5(traders);
         assertTrue(result);
         log.info("exercise5 | are any traders based in Milan?: {}", result);
     }
 
     @Test
     void testExercise6() {
-        var result = Practice.exercise6(transactions);
+        final var result = Practice.exercise6(transactions);
         assertNotNull(result);
         assertEquals(4, result.size());
         log.info("exercise6 | print all transactions' values from the traders living in Cambridge: {}", result);
@@ -83,14 +83,14 @@ class PracticeTest {
 
     @Test
     void testExercise7() {
-        var result = Practice.exercise7(transactions);
+        final var result = Practice.exercise7(transactions);
         assertEquals(1000, result);
         log.info("exercise7 | highest value of all the transactions: {}", result);
     }
 
     @Test
     void testExercise8() {
-        var result = Practice.exercise8(transactions);
+        final var result = Practice.exercise8(transactions);
         assertEquals(300, result);
         log.info("exercise8 | smallest transaction: {}", result);
     }

@@ -10,7 +10,7 @@ import java.util.stream.StreamSupport;
 @Slf4j
 public class WordCount {
     public static void main(String[] args) {
-        var sentence = String.join("", TextData.INFERNO);
+        final var sentence = String.join("", TextData.INFERNO);
 
         log.info("Word count for sentence: {}", countWordsIteratively(sentence));
         log.info("Word count for sentence: {}", countWordsUsingStream(sentence));
@@ -47,7 +47,7 @@ public class WordCount {
      * @return word count
      */
     public static int countWordsUsingStream(String sentence) {
-        var wordCounter = StreamSupport.stream(new WordCounterSpliterator(sentence), true)
+        final var wordCounter = StreamSupport.stream(new WordCounterSpliterator(sentence), true)
                 .reduce(new WordCounter(0, true), WordCounter::accumulate, WordCounter::combine);
         return wordCounter.counter();
     }
@@ -91,13 +91,13 @@ public class WordCount {
 
         @Override
         public Spliterator<Character> trySplit() {
-            var currentSize = string.length() - currentChar;
+            final var currentSize = string.length() - currentChar;
             if (currentSize < 10) {
                 return null;
             }
             for (var splitPos = currentSize / 2 + currentChar; splitPos < string.length(); splitPos++) {
                 if (Character.isWhitespace(string.charAt(splitPos))) {
-                    Spliterator<Character> spliterator = new WordCounterSpliterator(string.substring(currentChar, splitPos));
+                    final Spliterator<Character> spliterator = new WordCounterSpliterator(string.substring(currentChar, splitPos));
                     currentChar = splitPos;
                     return spliterator;
                 }

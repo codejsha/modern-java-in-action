@@ -14,10 +14,10 @@ import java.util.Map;
 public class CacheProcessing {
 
     public static void main(String[] args) {
-        var lines = TextData.INFERNO;
+        final var lines = TextData.INFERNO;
 
         try {
-            var messageDigest = MessageDigest.getInstance("SHA-256");
+            final var messageDigest = MessageDigest.getInstance("SHA-256");
             log.info("Update message digest for lines: {}", updateDigestTextLines(messageDigest, lines));
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
@@ -34,7 +34,7 @@ public class CacheProcessing {
      */
     public static Map<String, byte[]> updateDigestTextLines(MessageDigest messageDigest, List<String> lines)
             throws NoSuchAlgorithmException {
-        var dataToHash = new HashMap<String, byte[]>();
+        final var dataToHash = new HashMap<String, byte[]>();
 
         lines.forEach(line -> {
             if (!dataToHash.containsKey(line)) {

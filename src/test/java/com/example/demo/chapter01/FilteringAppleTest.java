@@ -1,7 +1,7 @@
 package com.example.demo.chapter01;
 
 import com.example.demo.data.AppleTestData;
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,31 +36,31 @@ class FilteringAppleTest {
 
     @Test
     void testFilterGreenApples() {
-        var apples = FilteringApple.filterGreenApples(inventory);
+        final var apples = FilteringApple.filterGreenApples(inventory);
         assertGreenApples(apples);
     }
 
     @Test
     void testFilterGreenApples2() {
-        var apples = FilteringApple.filterGreenApples2(inventory);
+        final var apples = FilteringApple.filterGreenApples2(inventory);
         assertGreenApples(apples);
     }
 
     @Test
     void testFilterHeavyApples() {
-        var apples = FilteringApple.filterHeavyApples(inventory);
+        final var apples = FilteringApple.filterHeavyApples(inventory);
         assertHeavyApples(apples);
     }
 
     @Test
     void testFilterHeavyApples2() {
-        var apples = FilteringApple.filterHeavyApples2(inventory);
+        final var apples = FilteringApple.filterHeavyApples2(inventory);
         assertHeavyApples(apples);
     }
 
     @Test
     void testFilterWeirdApples() {
-        var apples = FilteringApple.filterWeirdApples(inventory);
+        final var apples = FilteringApple.filterWeirdApples(inventory);
         assertNotNull(apples);
         assertEquals(0, apples.size());
         // apples.forEach(apple -> assertTrue(apple.getWeight() < 80 || Color.BROWN.equals(apple.getColor())));

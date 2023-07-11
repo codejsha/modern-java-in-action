@@ -9,8 +9,8 @@ import java.util.stream.IntStream;
 @Slf4j
 public class NumberStream {
     public static void main(String[] args) {
-        var start = 1;
-        var end = 100;
+        final var start = 1;
+        final var end = 100;
 
         log.info("Even numbers: {}", generateEvenNumbers(start, end));
         log.info("Pythagorean triples: {}", pythagoreanTriple1(start, end));

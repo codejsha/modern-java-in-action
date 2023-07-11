@@ -17,11 +17,11 @@ public class FactoryPattern {
     }
 
     public static void main(String[] args) {
-        Supplier<Product> loanSupplier = Loan::new;
-        var product1 = loanSupplier.get();
+        final Supplier<Product> loanSupplier = Loan::new;
+        final var product1 = loanSupplier.get();
         log.info("Product1: {}", product1.getClass().getSimpleName());
 
-        var product2 = ProductFactory.createProduct("loan");
+        final var product2 = ProductFactory.createProduct("loan");
         log.info("Product2: {}", product2.getClass().getSimpleName());
     }
 
@@ -30,7 +30,7 @@ public class FactoryPattern {
 
     public static class ProductFactory {
         public static Product createProduct(String name) {
-            var product = map.get(name);
+            final var product = map.get(name);
             if (product != null) {
                 return product.get();
             }

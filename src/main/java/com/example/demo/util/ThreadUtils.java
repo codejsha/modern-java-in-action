@@ -8,7 +8,7 @@ public class ThreadUtils {
     private static final DecimalFormat formatter = new DecimalFormat("#.##", new DecimalFormatSymbols(Locale.US));
 
     public static void delay() {
-        var delay = 1000;
+        final var delay = 1000;
         try {
             Thread.sleep(delay);
         } catch (InterruptedException e) {
@@ -17,7 +17,7 @@ public class ThreadUtils {
     }
 
     public static void randomDelay() {
-        var delay = 500 + (int) (Math.random() * 2000);
+        final var delay = 500 + (int) (Math.random() * 2000);
         try {
             Thread.sleep(delay);
         } catch (InterruptedException e) {

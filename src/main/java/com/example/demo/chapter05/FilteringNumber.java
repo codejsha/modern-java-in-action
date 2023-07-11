@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class FilteringNumber {
     public static void main(String[] args) {
-        var numbers = List.of(1, 2, 1, 3, 3, 2, 4);
+        final var numbers = List.of(1, 2, 1, 3, 3, 2, 4);
 
         // filtering unique even numbers
         log.info("Even numbers: {}", uniqueEvenNumbers(numbers));

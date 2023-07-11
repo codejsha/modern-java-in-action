@@ -18,14 +18,14 @@ class WordCountTest {
 
     @Test
     void testCountWordsIteratively() {
-        var result = WordCount.countWordsIteratively(sentence);
+        final var result = WordCount.countWordsIteratively(sentence);
         assertEquals(19, result);
         log.info("Word count for sentence: {}", result);
     }
 
     @Test
     void testCountWordsUsingStream() {
-        var result = WordCount.countWordsUsingStream(sentence);
+        final var result = WordCount.countWordsUsingStream(sentence);
         assertEquals(19, result);
         log.info("Word count for sentence: {}", result);
     }

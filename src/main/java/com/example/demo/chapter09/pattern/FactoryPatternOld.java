@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FactoryPatternOld {
     public static void main(String[] args) {
-        var product = ProductFactory.createProduct("loan");
+        final var product = ProductFactory.createProduct("loan");
         log.info("Product: {}", product.getClass().getSimpleName());
     }
 

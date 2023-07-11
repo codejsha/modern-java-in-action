@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 @Slf4j
 public class CollectionProcessing {
     public static void main(String[] args) {
-        var transactions = TransactionData.TRANSACTIONS;
-        var codes = TransactionData.REFERENCE_CODES;
-        var friends = PeopleData.FRIENDS;
-        var friendMovies = PeopleData.FRIEND_FAVORITE_MOVIES;
-        var familyMovies = PeopleData.FAMILY_FAVORITE_MOVIES;
+        final var transactions = TransactionData.TRANSACTIONS;
+        final var codes = TransactionData.REFERENCE_CODES;
+        final var friends = PeopleData.FRIENDS;
+        final var friendMovies = PeopleData.FRIEND_FAVORITE_MOVIES;
+        final var familyMovies = PeopleData.FAMILY_FAVORITE_MOVIES;
 
         log.info("Exclude transactions that occurred in 2011: {}",
                 removeTransactionIn2011(CollectionUtils.createModifiableList(transactions)));
@@ -27,19 +27,19 @@ public class CollectionProcessing {
         log.info("Sort favorite movies by key: {}", sortFavoriteMoviesByKey(friendMovies));
         log.info("Sort favorite movies by value: {}", sortFavoriteMoviesByValue(friendMovies));
 
-        var friend = "Thibaut";
+        final var friend = "Thibaut";
         log.info("Get favorite movie with default: name={} move={}", friend,
                 getFavoriteMoviesWithDefault(friendMovies, friend));
 
-        var friend2 = "Raphael";
-        var movie = "Star Wars";
+        final var friend2 = "Raphael";
+        final var movie = "Star Wars";
         log.info("Remove favorite movie: {}", removeFavoriteMovie(
                 CollectionUtils.createModifiableMap(friendMovies), friend2, movie));
 
         log.info("Replace all movies with uppercase: {}", replaceAllMoviesWithUppercase(
                 CollectionUtils.createModifiableMap(friendMovies)));
 
-        var everyoneMovies = mergeFavoriteMovies(friendMovies, familyMovies);
+        final var everyoneMovies = mergeFavoriteMovies(friendMovies, familyMovies);
         log.info("Merge favorite movies: {}", everyoneMovies);
         log.info("Count favorite movies: {}", countFavoriteMovies(everyoneMovies));
     }
@@ -84,7 +84,7 @@ public class CollectionProcessing {
      * @return sorted favorite movie map
      */
     public static Map<String, String> sortFavoriteMoviesByKey(Map<String, String> favoriteMovies) {
-        var newFavoriteMovies = favoriteMovies.entrySet().stream()
+        final var newFavoriteMovies = favoriteMovies.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
@@ -102,7 +102,7 @@ public class CollectionProcessing {
      * @return sorted favorite movie map
      */
     public static Map<String, String> sortFavoriteMoviesByValue(Map<String, String> favoriteMovies) {
-        var newFavoriteMovies = favoriteMovies.entrySet().stream()
+        final var newFavoriteMovies = favoriteMovies.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue())
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
@@ -157,7 +157,7 @@ public class CollectionProcessing {
      */
     public static Map<String, String> mergeFavoriteMovies(
             Map<String, String> friendMovies, Map<String, String> familyMovies) {
-        var newFavoriteMovies = new HashMap<>(friendMovies);
+        final var newFavoriteMovies = new HashMap<>(friendMovies);
         familyMovies.forEach((name, movie) -> {
             newFavoriteMovies.merge(name, movie, (oldValue, newValue) -> oldValue + ", " + newValue);
         });

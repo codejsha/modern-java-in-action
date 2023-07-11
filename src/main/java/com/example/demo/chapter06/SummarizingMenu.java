@@ -13,7 +13,7 @@ import static java.util.stream.Collectors.*;
 @Slf4j
 public class SummarizingMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISHES;
+        final var menu = DishData.DISHES;
 
         log.info("Total calories in menu: {}", sumTotalCalories(menu));
         log.info("Average calories in menu: {}", calculateAverageCalories(menu));

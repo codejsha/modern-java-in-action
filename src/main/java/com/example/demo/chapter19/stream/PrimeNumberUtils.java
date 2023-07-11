@@ -10,9 +10,9 @@ public class PrimeNumberUtils {
                 .limit(n);
     }
 
-    private static boolean isPrime(Integer integer) {
-        var candidateRoot = (int) Math.sqrt((double) integer);
+    private static boolean isPrime(Integer num) {
+        final var candidateRoot = (int) Math.sqrt((double) num);
         return IntStream.rangeClosed(2, candidateRoot)
-                .noneMatch(i -> integer % i == 0);
+                .noneMatch(i -> num % i == 0);
     }
 }

@@ -10,7 +10,7 @@ import java.util.Optional;
 @Slf4j
 public class FindingMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISHES;
+        final var menu = DishData.DISHES;
 
         // finding any vegetarian dish
         log.info("Any vegetarian dish: {}", anyVegetarianDish(menu));
@@ -84,5 +84,4 @@ public class FindingMenu {
                 .filter(Dish::vegetarian)
                 .findFirst();
     }
-
 }

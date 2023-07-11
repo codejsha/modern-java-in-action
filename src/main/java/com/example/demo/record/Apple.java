@@ -1,6 +1,6 @@
 package com.example.demo.record;
 
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 
 public record Apple(
         int weight,

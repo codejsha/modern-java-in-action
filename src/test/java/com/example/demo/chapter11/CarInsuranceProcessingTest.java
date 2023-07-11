@@ -30,37 +30,37 @@ class CarInsuranceProcessingTest {
 
     @Test
     void testGetCarInsuranceName1() {
-        var result1 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person1));
+        final var result1 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person1));
         assertNotNull(result1);
         assertEquals(cambridgeInsurance.name(), result1);
 
-        var result2 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person2));
+        final var result2 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person2));
         assertNotNull(result2);
         assertEquals("Unknown", result2);
 
-        var result3 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person3));
+        final var result3 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person3));
         assertNotNull(result3);
         assertEquals("Unknown", result3);
     }
 
     @Test
     void testGetCarInsuranceName2() {
-        var result1 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person1), 18);
+        final var result1 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person1), 18);
         assertNotNull(result1);
         assertEquals(cambridgeInsurance.name(), result1);
 
-        var result2 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person2), 18);
+        final var result2 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person2), 18);
         assertNotNull(result2);
         assertEquals("Unknown", result2);
 
-        var result3 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person3), 18);
+        final var result3 = CarInsuranceProcessing.getCarInsuranceName(Optional.ofNullable(person3), 18);
         assertNotNull(result3);
         assertEquals("Unknown", result3);
     }
 
     @Test
     void testGetCarInsuranceNames() {
-        var result = CarInsuranceProcessing.getCarInsuranceNames(List.of(person1, person2, person3));
+        final var result = CarInsuranceProcessing.getCarInsuranceNames(List.of(person1, person2, person3));
         assertNotNull(result);
         assertEquals(1, result.size());
         assertEquals(cambridgeInsurance.name(), result.iterator().next());
@@ -68,17 +68,17 @@ class CarInsuranceProcessingTest {
 
     @Test
     void testNullSafeFindCheapestInsurance() {
-        var result1 = CarInsuranceProcessing.nullSafeFindCheapestInsurance(
+        final var result1 = CarInsuranceProcessing.nullSafeFindCheapestInsurance(
                 Optional.ofNullable(person1), Optional.ofNullable(car1));
         assertNotNull(result1);
         assertNotEquals(Optional.empty(), result1);
 
-        var result2 = CarInsuranceProcessing.nullSafeFindCheapestInsurance(
+        final var result2 = CarInsuranceProcessing.nullSafeFindCheapestInsurance(
                 Optional.ofNullable(person2), Optional.empty());
         assertNotNull(result2);
         assertEquals(Optional.empty(), result2);
 
-        var result3 = CarInsuranceProcessing.nullSafeFindCheapestInsurance(
+        final var result3 = CarInsuranceProcessing.nullSafeFindCheapestInsurance(
                 Optional.ofNullable(person3), Optional.ofNullable(car1));
         assertNotNull(result3);
         assertNotEquals(Optional.empty(), result3);

@@ -7,21 +7,21 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 public class ShopMain {
     public static void main(String[] args) {
-        var shop = new Shop("BestShop");
-        var start = System.nanoTime();
-        var futurePrice = shop.getPriceAsync("my favorite product");
-        var invocationTime = ((System.nanoTime() - start) / 1_000_000);
+        final var shop = new Shop("BestShop");
+        final var start = System.nanoTime();
+        final var futurePrice = shop.getPriceAsync("my favorite product");
+        final var invocationTime = ((System.nanoTime() - start) / 1_000_000);
         log.info("Invocation returned after " + invocationTime + " msecs");
 
         doSomethingElse();
 
         try {
-            double price = futurePrice.get();
+            final double price = futurePrice.get();
             log.info("Price is " + String.format("%.2f", price));
         } catch (ExecutionException | InterruptedException e) {
             throw new RuntimeException(e);
         }
-        var retrievalTime = ((System.nanoTime() - start) / 1_000_000);
+        final var retrievalTime = ((System.nanoTime() - start) / 1_000_000);
         log.info("Price returned after " + retrievalTime + " msecs");
     }
 

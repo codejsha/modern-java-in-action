@@ -1,7 +1,7 @@
 package com.example.demo.chapter06;
 
 import com.example.demo.data.DishData;
-import com.example.demo.enumeration.CaloricLevel;
+import com.example.demo.constant.CaloricLevel;
 import com.example.demo.record.Dish;
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,8 +14,8 @@ import static java.util.stream.Collectors.*;
 @Slf4j
 public class GroupingMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISHES;
-        var dishTags = DishData.DISH_TAGS;
+        final var menu = DishData.DISHES;
+        final var dishTags = DishData.DISH_TAGS;
 
         log.info("Dishes grouped by type: {}", GroupingMenu.groupDishesByType(menu));
         log.info("Dishes grouped by caloric level: {}", GroupingMenu.groupDishesByCaloricLevel(menu));

@@ -21,7 +21,7 @@ class FilteringSpecialMenuTest {
 
     @Test
     void testLowCalorieDishes() {
-        var result = FilteringSpecialMenu.lowCalorieDishes(menu);
+        final var result = FilteringSpecialMenu.lowCalorieDishes(menu);
         assertNotNull(result);
         assertEquals(2, result.size());
         result.forEach(dish -> assertTrue(dish.calories() < 320));
@@ -30,7 +30,7 @@ class FilteringSpecialMenuTest {
 
     @Test
     void testLowCalorieDishes2() {
-        var result = FilteringSpecialMenu.lowCalorieDishes2(menu);
+        final var result = FilteringSpecialMenu.lowCalorieDishes2(menu);
         assertNotNull(result);
         assertEquals(2, result.size());
         result.forEach(dish -> assertTrue(dish.calories() < 320));
@@ -39,7 +39,7 @@ class FilteringSpecialMenuTest {
 
     @Test
     void testHighCalorieDishes() {
-        var result = FilteringSpecialMenu.highCalorieDishes(menu);
+        final var result = FilteringSpecialMenu.highCalorieDishes(menu);
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(dish -> assertTrue(dish.calories() > 300));
@@ -48,7 +48,7 @@ class FilteringSpecialMenuTest {
 
     @Test
     void threeHighCalorieDishes() {
-        var result = FilteringSpecialMenu.threeHighCalorieDishes(menu);
+        final var result = FilteringSpecialMenu.threeHighCalorieDishes(menu);
         assertNotNull(result);
         assertEquals(3, result.size());
         result.forEach(dish -> assertTrue(dish.calories() > 300));
@@ -57,7 +57,7 @@ class FilteringSpecialMenuTest {
 
     @Test
     void testOtherHighCalorieDishes() {
-        var result = FilteringSpecialMenu.otherHighCalorieDishes(menu);
+        final var result = FilteringSpecialMenu.otherHighCalorieDishes(menu);
         assertNotNull(result);
         assertEquals(1, result.size());
         result.forEach(dish -> assertTrue(dish.calories() > 300));

@@ -1,7 +1,7 @@
 package com.example.demo.chapter06;
 
 import com.example.demo.data.DishData;
-import com.example.demo.enumeration.CaloricLevel;
+import com.example.demo.constant.CaloricLevel;
 import com.example.demo.record.Dish;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,7 +26,7 @@ class GroupingMenuTest {
 
     @Test
     void testGroupDishesByType() {
-        var result = GroupingMenu.groupDishesByType(menu);
+        final var result = GroupingMenu.groupDishesByType(menu);
         assertNotNull(result);
         assertEquals(2, result.get(Dish.Type.FISH).size());
         assertEquals(3, result.get(Dish.Type.MEAT).size());
@@ -36,7 +36,7 @@ class GroupingMenuTest {
 
     @Test
     void testGroupDishesByCaloricLevel() {
-        var result = GroupingMenu.groupDishesByCaloricLevel(menu);
+        final var result = GroupingMenu.groupDishesByCaloricLevel(menu);
         assertNotNull(result);
         assertEquals(4, result.get(CaloricLevel.DIET).size());
         assertEquals(4, result.get(CaloricLevel.NORMAL).size());
@@ -46,7 +46,7 @@ class GroupingMenuTest {
 
     @Test
     void testGroupCaloricDishesByType() {
-        var result = GroupingMenu.groupCaloricDishesByType(menu);
+        final var result = GroupingMenu.groupCaloricDishesByType(menu);
         assertNotNull(result);
         assertNull(result.get(Dish.Type.FISH));
         assertEquals(2, result.get(Dish.Type.MEAT).size());
@@ -56,7 +56,7 @@ class GroupingMenuTest {
 
     @Test
     void testGroupDishNamesByType() {
-        var result = GroupingMenu.groupDishNamesByType(menu);
+        final var result = GroupingMenu.groupDishNamesByType(menu);
 
         assertNotNull(result);
         // fish
@@ -77,7 +77,7 @@ class GroupingMenuTest {
 
     @Test
     void testGroupDishTagsByType() {
-        var result = GroupingMenu.groupDishTagsByType(menu, dishTags);
+        final var result = GroupingMenu.groupDishTagsByType(menu, dishTags);
 
         assertNotNull(result);
         // fish
@@ -98,7 +98,7 @@ class GroupingMenuTest {
 
     @Test
     void testGroupDishesByTypeAndCaloricLevel() {
-        var result = GroupingMenu.groupDishesByTypeAndCaloricLevel(menu);
+        final var result = GroupingMenu.groupDishesByTypeAndCaloricLevel(menu);
 
         assertNotNull(result);
         // fish
@@ -119,7 +119,7 @@ class GroupingMenuTest {
 
     @Test
     void testCountDishesInGroups() {
-        var result = GroupingMenu.countDishesInGroups(menu);
+        final var result = GroupingMenu.countDishesInGroups(menu);
         assertNotNull(result);
         assertEquals(2, result.get(Dish.Type.FISH));
         assertEquals(3, result.get(Dish.Type.MEAT));
@@ -129,7 +129,7 @@ class GroupingMenuTest {
 
     @Test
     void testMostCaloricDishesByType() {
-        var result = GroupingMenu.mostCaloricDishesByType(menu);
+        final var result = GroupingMenu.mostCaloricDishesByType(menu);
         assertNotNull(result);
         result.get(Dish.Type.FISH).ifPresent(dish -> assertEquals("salmon", dish.name()));
         result.get(Dish.Type.MEAT).ifPresent(dish -> assertEquals("pork", dish.name()));
@@ -139,7 +139,7 @@ class GroupingMenuTest {
 
     @Test
     void testMostCaloricDishesByTypeWithoutOptional() {
-        var result = GroupingMenu.mostCaloricDishesByTypeWithoutOptional(menu);
+        final var result = GroupingMenu.mostCaloricDishesByTypeWithoutOptional(menu);
         assertNotNull(result);
         assertEquals("salmon", result.get(Dish.Type.FISH).name());
         assertEquals("pork", result.get(Dish.Type.MEAT).name());
@@ -149,7 +149,7 @@ class GroupingMenuTest {
 
     @Test
     void testMostCaloricDishesByTypeWithToMap() {
-        var result = GroupingMenu.mostCaloricDishesByTypeWithToMap(menu);
+        final var result = GroupingMenu.mostCaloricDishesByTypeWithToMap(menu);
         assertNotNull(result);
         assertEquals("salmon", result.get(Dish.Type.FISH).name());
         assertEquals("pork", result.get(Dish.Type.MEAT).name());
@@ -159,7 +159,7 @@ class GroupingMenuTest {
 
     @Test
     void testSumCaloriesByType() {
-        var result = GroupingMenu.sumCaloriesByType(menu);
+        final var result = GroupingMenu.sumCaloriesByType(menu);
         assertNotNull(result);
         assertEquals(850, result.get(Dish.Type.FISH));
         assertEquals(1900, result.get(Dish.Type.MEAT));
@@ -169,7 +169,7 @@ class GroupingMenuTest {
 
     @Test
     void testCaloricLevelsByType() {
-        var result = GroupingMenu.caloricLevelsByType(menu);
+        final var result = GroupingMenu.caloricLevelsByType(menu);
         assertNotNull(result);
         assertEquals(2, result.get(Dish.Type.FISH).size());
         assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL),
@@ -185,7 +185,7 @@ class GroupingMenuTest {
 
     @Test
     void testCaloricLevelsByTypeHashSet() {
-        var result = GroupingMenu.caloricLevelsByTypeHashSet(menu);
+        final var result = GroupingMenu.caloricLevelsByTypeHashSet(menu);
         assertNotNull(result);
         assertEquals(2, result.get(Dish.Type.FISH).size());
         assertEquals(Set.of(CaloricLevel.DIET, CaloricLevel.NORMAL),

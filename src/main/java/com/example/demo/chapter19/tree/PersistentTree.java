@@ -74,10 +74,10 @@ public class PersistentTree {
         } else if (key.equals(tree.key)) {
             return new Tree(key, newValue, tree.left, tree.right);
         } else if (key.compareTo(tree.key) < 0) {
-            var updatedLeft = updateFunctionApproach2(key, newValue, tree.left);
+            final var updatedLeft = updateFunctionApproach2(key, newValue, tree.left);
             return new Tree(tree.key, tree.value, updatedLeft, tree.right);
         } else {
-            var updatedRight = updateFunctionApproach2(key, newValue, tree.right);
+            final var updatedRight = updateFunctionApproach2(key, newValue, tree.right);
             return new Tree(tree.key, tree.value, tree.left, updatedRight);
         }
     }

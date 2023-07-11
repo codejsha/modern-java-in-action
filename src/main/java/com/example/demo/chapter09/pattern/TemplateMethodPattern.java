@@ -11,7 +11,7 @@ public class TemplateMethodPattern {
     }
 
     public void processCustomer(int id, Consumer<Customer> makeCustomerHappy) {
-        var customer = Database.getCustomerWithId(id);
+        final var customer = Database.getCustomerWithId(id);
         makeCustomerHappy.accept(customer);
     }
 

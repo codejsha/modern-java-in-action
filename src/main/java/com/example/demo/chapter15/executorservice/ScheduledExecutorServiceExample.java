@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class ScheduledExecutorServiceExample {
     public static void main(String[] args) {
-        var scheduledExecutorService = Executors.newScheduledThreadPool(10);
+        final var scheduledExecutorService = Executors.newScheduledThreadPool(10);
         work1();
         scheduledExecutorService.schedule(ScheduledExecutorServiceExample::work2, 10, TimeUnit.SECONDS);
 

@@ -1,6 +1,6 @@
 package com.example.demo.data;
 
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 import com.example.demo.record.Apple;
 
 import java.util.List;

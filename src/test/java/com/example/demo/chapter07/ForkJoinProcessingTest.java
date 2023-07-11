@@ -17,15 +17,15 @@ class ForkJoinProcessingTest {
 
         @Test
         void testForkJoinSum() {
-            var result1 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(100L);
+            final var result1 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(100L);
             assertEquals(5050L, result1);
             log.info("Sum of Sequence: {}", result1);
 
-            var result2 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(10_000L);
+            final var result2 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(10_000L);
             assertEquals(50005000L, result2);
             log.info("Sum of Sequence: {}", result2);
 
-            var result3 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(100_000L);
+            final var result3 = ForkJoinProcessing.ForkJoinSumCalculator.forkJoinSum(100_000L);
             assertEquals(5000050000L, result3);
             log.info("Sum of Sequence: {}", result3);
         }

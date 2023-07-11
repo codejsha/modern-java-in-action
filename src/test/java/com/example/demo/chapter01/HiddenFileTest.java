@@ -25,19 +25,19 @@ class HiddenFileTest {
 
     @Test
     void testListHiddenFiles() {
-        var files = HiddenFile.listHiddenFiles();
+        final var files = HiddenFile.listHiddenFiles();
         assertHiddenFiles(files);
     }
 
     @Test
     void testListHiddenFiles2() {
-        var files = HiddenFile.listHiddenFiles2();
+        final var files = HiddenFile.listHiddenFiles2();
         assertHiddenFiles(files);
     }
 
     @Test
     void testListHiddenFiles3() {
-        var files = HiddenFile.listHiddenFiles3();
+        final var files = HiddenFile.listHiddenFiles3();
         assertHiddenFiles(files);
     }
 }

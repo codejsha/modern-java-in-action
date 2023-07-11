@@ -1,7 +1,7 @@
 package com.example.demo.chapter03;
 
 import com.example.demo.data.AppleData;
-import com.example.demo.enumeration.Color;
+import com.example.demo.constant.Color;
 import com.example.demo.record.Apple;
 import lombok.extern.slf4j.Slf4j;
 
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class FilteringList {
     public static void main(String[] args) {
-        var inventory = AppleData.APPLE_LIST;
+        final var inventory = AppleData.APPLE_LIST;
 
         // green apples
         log.info("Green apples: {}", filterGreenApples(inventory));

@@ -15,14 +15,14 @@ class StrategyPatternTest {
 
     @Test
     void testIsNumeric() {
-        var validator = new StrategyPattern.Validator((str) -> str.matches("\\d+"));
+        final var validator = new StrategyPattern.Validator((str) -> str.matches("\\d+"));
         assertFalse(validator.validate("aaaa"));
         log.info("Is numeric: {}", validator.validate("aaaa"));
     }
 
     @Test
     void testIsAllLowerCase() {
-        var validator = new StrategyPattern.Validator((str) -> str.matches("[a-z]+"));
+        final var validator = new StrategyPattern.Validator((str) -> str.matches("[a-z]+"));
         assertTrue(validator.validate("bbbb"));
         log.info("Is all lowercase: {}", validator.validate("bbbb"));
     }

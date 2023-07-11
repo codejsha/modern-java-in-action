@@ -9,7 +9,7 @@ import java.util.stream.LongStream;
 @Slf4j
 public class ForkJoinProcessing {
     public static void main(String[] args) {
-        var result = ForkJoinSumCalculator.forkJoinSum(1_000_000L);
+        final var result = ForkJoinSumCalculator.forkJoinSum(1_000_000L);
         log.info("Sum of Sequence: {}", result);
     }
 
@@ -30,22 +30,22 @@ public class ForkJoinProcessing {
         }
 
         public static long forkJoinSum(long number) {
-            var numbers = LongStream.rangeClosed(1, number).toArray();
-            var task = new ForkJoinSumCalculator(numbers);
+            final var numbers = LongStream.rangeClosed(1, number).toArray();
+            final var task = new ForkJoinSumCalculator(numbers);
             return new ForkJoinPool().invoke(task);
         }
 
         @Override
         protected Long compute() {
-            var length = end - start;
+            final var length = end - start;
             if (length <= THRESHOLD) {
                 return computeSequentially();
             }
-            var leftTask = new ForkJoinSumCalculator(numbers, start, start + length / 2);
+            final var leftTask = new ForkJoinSumCalculator(numbers, start, start + length / 2);
             leftTask.fork();
-            var rightTask = new ForkJoinSumCalculator(numbers, start + length / 2, end);
-            var rightResult = rightTask.compute();
-            var leftResult = leftTask.join();
+            final var rightTask = new ForkJoinSumCalculator(numbers, start + length / 2, end);
+            final var rightResult = rightTask.compute();
+            final var leftResult = leftTask.join();
             return leftResult + rightResult;
         }
 

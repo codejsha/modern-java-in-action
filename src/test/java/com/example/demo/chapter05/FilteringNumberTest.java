@@ -19,7 +19,7 @@ class FilteringNumberTest {
 
     @Test
     void testUniqueEvenNumbers() {
-        var result = FilteringNumber.uniqueEvenNumbers(numbers);
+        final var result = FilteringNumber.uniqueEvenNumbers(numbers);
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(number -> assertEquals(0, number % 2));
@@ -28,7 +28,7 @@ class FilteringNumberTest {
 
     @Test
     void testFilterEvenNumbers() {
-        var result = FilteringNumber.filterNumbers(numbers, number -> number % 2 == 0);
+        final var result = FilteringNumber.filterNumbers(numbers, number -> number % 2 == 0);
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(number -> assertEquals(0, number % 2));
@@ -37,7 +37,7 @@ class FilteringNumberTest {
 
     @Test
     void testFilterOddNumbers() {
-        var result = FilteringNumber.filterNumbers(numbers, number -> number % 2 != 0);
+        final var result = FilteringNumber.filterNumbers(numbers, number -> number % 2 != 0);
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(number -> assertNotEquals(0, number % 2));
@@ -46,7 +46,7 @@ class FilteringNumberTest {
 
     @Test
     void testFilterNumbersSmallerThan3() {
-        var result = FilteringNumber.filterNumbers(numbers, number -> number < 3);
+        final var result = FilteringNumber.filterNumbers(numbers, number -> number < 3);
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(number -> assertTrue(number < 3));

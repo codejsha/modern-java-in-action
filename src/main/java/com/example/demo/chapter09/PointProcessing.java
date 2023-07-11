@@ -9,7 +9,7 @@ import java.util.List;
 @Slf4j
 public class PointProcessing {
     public static void main(String[] args) {
-        var point = new Point(5, 5);
+        final var point = new Point(5, 5);
         log.info("Point moved to the right: {}", point.moveBy(10, 0));
         log.info("Point moved to the left: {}", point.moveBy(-10, 0));
         log.info("Point moved to the up: {}", point.moveBy(0, 10));

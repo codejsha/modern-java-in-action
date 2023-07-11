@@ -28,9 +28,9 @@ public class Shop {
     }
 
     public Future<Double> getPriceAsync(String product) {
-        var futurePrice = new CompletableFuture<Double>();
+        final var futurePrice = new CompletableFuture<Double>();
         new Thread(() -> {
-            var price = calculatePrice(product);
+            final var price = calculatePrice(product);
             futurePrice.complete(price);
         }).start();
         return futurePrice;

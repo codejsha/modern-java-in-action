@@ -8,7 +8,7 @@ import java.util.List;
 @Slf4j
 public class ObserverPattern {
     public static void main(String[] args) {
-        var feed = new Feed();
+        final var feed = new Feed();
 
         feed.registerObserver((tweet) -> {
             if (tweet != null && tweet.contains("money")) {

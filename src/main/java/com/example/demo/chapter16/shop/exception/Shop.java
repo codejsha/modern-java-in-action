@@ -28,10 +28,10 @@ public class Shop {
     }
 
     public Future<Double> getPriceAsync(String product) {
-        var futurePrice = new CompletableFuture<Double>();
+        final var futurePrice = new CompletableFuture<Double>();
         new Thread(() -> {
             try {
-                var price = calculatePrice(product);
+                final var price = calculatePrice(product);
                 futurePrice.complete(price);
             } catch (Exception ex) {
                 futurePrice.completeExceptionally(ex);

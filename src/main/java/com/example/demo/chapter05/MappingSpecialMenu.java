@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class MappingSpecialMenu {
     public static void main(String[] args) {
-        var menu = DishData.SPECIAL_DISHES;
+        final var menu = DishData.SPECIAL_DISHES;
 
         log.info("Dish names: {}", dishNames(menu));
         log.info("Dish name lengths: {}", dishNameLengths(menu));

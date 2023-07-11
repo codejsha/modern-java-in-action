@@ -16,9 +16,9 @@ public class BestPriceFinderMain {
     }
 
     private static void execute(String msg, Supplier<List<String>> s) {
-        long start = System.nanoTime();
+        final long start = System.nanoTime();
         log.info("{}", s.get());
-        long duration = (System.nanoTime() - start) / 1_000_000;
+        final long duration = (System.nanoTime() - start) / 1_000_000;
         log.info("{} done in {} msecs", msg, duration);
     }
 }

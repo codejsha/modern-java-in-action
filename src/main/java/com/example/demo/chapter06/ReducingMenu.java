@@ -11,7 +11,7 @@ import static java.util.stream.Collectors.reducing;
 @Slf4j
 public class ReducingMenu {
     public static void main(String[] args) {
-        var menu = DishData.DISHES;
+        final var menu = DishData.DISHES;
 
         log.info("Total calories in menu: {}", calculateTotalCalories(menu));
         log.info("Total calories in menu: {}", calculateTotalCaloriesWithMethodReference(menu));

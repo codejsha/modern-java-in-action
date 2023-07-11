@@ -22,7 +22,7 @@ class FilteringMenuTest {
 
     @Test
     void testVegetarianDishes() {
-        var result = FilteringMenu.filterVegetarianDishes(menu);
+        final var result = FilteringMenu.filterVegetarianDishes(menu);
         assertNotNull(result);
         assertTrue(result.size() > 0);
         result.forEach(dish -> assertTrue(dish.vegetarian()));

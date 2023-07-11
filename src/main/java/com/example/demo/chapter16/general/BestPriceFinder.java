@@ -40,7 +40,7 @@ public class BestPriceFinder {
     }
 
     public List<String> findPricesFuture(String product) {
-        var priceFutures = shops.stream()
+        final var priceFutures = shops.stream()
                 .map(shop -> CompletableFuture.supplyAsync(() -> shop.getName() + " price is "
                         + shop.getPrice(product), executor))
                 .toList();

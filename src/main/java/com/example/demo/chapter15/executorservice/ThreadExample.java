@@ -5,13 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ThreadExample {
     public static void main(String[] args) throws InterruptedException {
-        var x = 1337;
-        var result = new Result();
+        final var x = 1337;
+        final var result = new Result();
 
-        var t1 = new Thread(() -> {
+        final var t1 = new Thread(() -> {
             result.left = f(x);
         });
-        var t2 = new Thread(() -> {
+        final var t2 = new Thread(() -> {
             result.right = g(x);
         });
         t1.start();

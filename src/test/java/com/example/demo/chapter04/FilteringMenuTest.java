@@ -22,7 +22,7 @@ class FilteringMenuTest {
 
     @Test
     void testThreeHighCalorieDishes() {
-        var dishes = FilteringMenu.threeHighCalorieDishes(menu);
+        final var dishes = FilteringMenu.threeHighCalorieDishes(menu);
         assertNotNull(dishes);
         assertEquals(3, dishes.size());
         log.info("High calorie dishes: {}", dishes);

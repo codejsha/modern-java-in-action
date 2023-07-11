@@ -9,12 +9,12 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class CompletableFutureCombine {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        var executorService = Executors.newFixedThreadPool(10);
-        var x = 1337;
+        final var executorService = Executors.newFixedThreadPool(10);
+        final var x = 1337;
 
-        var a = new CompletableFuture<Integer>();
-        var b = new CompletableFuture<Integer>();
-        var c = a.thenCombine(b, Integer::sum);
+        final var a = new CompletableFuture<Integer>();
+        final var b = new CompletableFuture<Integer>();
+        final var c = a.thenCombine(b, Integer::sum);
         executorService.submit(() -> a.complete(f(x)));
         executorService.submit(() -> b.complete(g(x)));
 

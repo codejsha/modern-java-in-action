@@ -14,7 +14,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsOfValues() {
-        var result = BuildingStream.streamsOfValues().toList();
+        final var result = BuildingStream.streamsOfValues().toList();
         assertNotNull(result);
         assertEquals(4, result.size());
         result.forEach(value -> assertEquals(value.toUpperCase(), value));
@@ -23,7 +23,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamFromNullable() {
-        var result = BuildingStream.streamFromNullable().toList();
+        final var result = BuildingStream.streamFromNullable().toList();
         assertNotNull(result);
         assertEquals(0, result.size());
         log.info("Stream from nullable: {}", result);
@@ -31,7 +31,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsFromArrays() {
-        var result = BuildingStream.streamsFromArrays().toList();
+        final var result = BuildingStream.streamsFromArrays().toList();
         assertNotNull(result);
         assertEquals(4, result.size());
         result.forEach(value -> assertEquals(value.toUpperCase(), value));
@@ -40,7 +40,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsFromFiles() {
-        var result = BuildingStream.streamsFromFiles();
+        final var result = BuildingStream.streamsFromFiles();
         assertNotNull(result);
         assertEquals(450, result);
         log.info("Unique word count from file: {}", result);
@@ -48,7 +48,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsOfEvenNumbers() {
-        var result = BuildingStream.streamsOfEvenNumbers().toList();
+        final var result = BuildingStream.streamsOfEvenNumbers().toList();
         assertNotNull(result);
         assertEquals(10, result.size());
         result.forEach(value -> assertEquals(0, value % 2));
@@ -57,7 +57,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsOfEvenNumbers2() {
-        var result = BuildingStream.streamsOfEvenNumbers2().toList();
+        final var result = BuildingStream.streamsOfEvenNumbers2().toList();
         assertNotNull(result);
         assertEquals(50, result.size());
         result.forEach(value -> assertEquals(0, value % 2));
@@ -66,7 +66,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsOfMultipleOfFour() {
-        var result = BuildingStream.streamsOfMultipleOfFour().toList();
+        final var result = BuildingStream.streamsOfMultipleOfFour().toList();
         assertNotNull(result);
         assertEquals(25, result.size());
         result.forEach(value -> assertEquals(0, value % 4));
@@ -75,7 +75,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsOfRandomValues() {
-        var result = BuildingStream.streamsOfRandomValues().toList();
+        final var result = BuildingStream.streamsOfRandomValues().toList();
         assertNotNull(result);
         assertEquals(10, result.size());
         result.forEach(value -> assertTrue(value >= 0.0 && value < 1.0));
@@ -84,7 +84,7 @@ class BuildingStreamTest {
 
     @Test
     void testStreamsOfFibonacciNumbers() {
-        var result = BuildingStream.streamsOfFibonacciSequence().toList();
+        final var result = BuildingStream.streamsOfFibonacciSequence().toList();
         assertNotNull(result);
         assertEquals(10, result.size());
         result.forEach(value -> assertTrue(value >= 0));

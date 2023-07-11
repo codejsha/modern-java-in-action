@@ -21,14 +21,14 @@ class PrimitiveStreamTest {
 
     @Test
     void testSumOfCalories() {
-        var result = PrimitiveStream.sumOfCalories(menu);
+        final var result = PrimitiveStream.sumOfCalories(menu);
         assertEquals(4300, result);
         log.info("Sum of calories: {}", result);
     }
 
     @Test
     void testMaxOfCalories() {
-        var result = PrimitiveStream.maxOfCalories(menu);
+        final var result = PrimitiveStream.maxOfCalories(menu);
         assertEquals(800, result);
         log.info("Max of calories: {}", result);
     }

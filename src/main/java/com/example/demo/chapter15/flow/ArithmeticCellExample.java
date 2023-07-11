@@ -11,9 +11,9 @@ public class ArithmeticCellExample {
     }
 
     public static void exercise1() {
-        var c1 = new SimpleCell("C1");
-        var c2 = new SimpleCell("C2");
-        var c3 = new ArithmeticCell("C3");
+        final var c1 = new SimpleCell("C1");
+        final var c2 = new SimpleCell("C2");
+        final var c3 = new ArithmeticCell("C3");
 
         c1.subscribe(c3::setLeft);
         c2.subscribe(c3::setRight);
@@ -24,11 +24,11 @@ public class ArithmeticCellExample {
     }
 
     public static void exercise2() {
-        var c1 = new SimpleCell("C1");
-        var c2 = new SimpleCell("C2");
-        var c3 = new ArithmeticCell("C3");
-        var c4 = new SimpleCell("C4");
-        var c5 = new ArithmeticCell("C5");
+        final var c1 = new SimpleCell("C1");
+        final var c2 = new SimpleCell("C2");
+        final var c3 = new ArithmeticCell("C3");
+        final var c4 = new SimpleCell("C4");
+        final var c5 = new ArithmeticCell("C5");
 
         c1.subscribe(c3::setLeft);
         c2.subscribe(c3::setRight);

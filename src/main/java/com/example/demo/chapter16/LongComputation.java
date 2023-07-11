@@ -14,7 +14,7 @@ public class LongComputation {
     }
 
     public static void asyncComputation() {
-        var executorService = Executors.newCachedThreadPool();
+        final var executorService = Executors.newCachedThreadPool();
 
         // anonymous class
         // var future = executorService.submit(new Callable<Double>() {
@@ -28,12 +28,12 @@ public class LongComputation {
         // var future = executorService.submit(() -> doSomeLongComputation());
 
         // method reference
-        var future = executorService.submit(LongComputation::doSomeLongComputation);
+        final var future = executorService.submit(LongComputation::doSomeLongComputation);
 
         doSomethingElse();
 
         try {
-            var result = future.get(1, TimeUnit.SECONDS);
+            final var result = future.get(1, TimeUnit.SECONDS);
             log.info("Result: {}", result);
         } catch (ExecutionException e) {
             log.error("Computation error", e);

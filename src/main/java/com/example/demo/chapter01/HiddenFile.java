@@ -14,7 +14,7 @@ public class HiddenFile {
     }
 
     /**
-     * list hidden files
+     * list hidden files using anonymous class
      *
      * @return hidden files
      */

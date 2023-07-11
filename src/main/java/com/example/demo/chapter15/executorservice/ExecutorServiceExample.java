@@ -8,11 +8,11 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class ExecutorServiceExample {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        var x = 1337;
+        final var x = 1337;
 
-        var executorService = Executors.newFixedThreadPool(2);
-        var y = executorService.submit(() -> f(x));
-        var z = executorService.submit(() -> g(x));
+        final var executorService = Executors.newFixedThreadPool(2);
+        final var y = executorService.submit(() -> f(x));
+        final var z = executorService.submit(() -> g(x));
         log.info("y + z = {}", y.get() + z.get());
 
         executorService.shutdown();

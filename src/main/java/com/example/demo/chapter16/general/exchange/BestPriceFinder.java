@@ -32,9 +32,9 @@ public class BestPriceFinder {
     });
 
     public List<String> findPricesInUSD(String product) {
-        var priceFutures = new ArrayList<CompletableFuture<Double>>();
+        final var priceFutures = new ArrayList<CompletableFuture<Double>>();
         for (var shop : shops) {
-            var futurePriceInUSD = CompletableFuture.supplyAsync(() -> shop.getPrice(product))
+            final var futurePriceInUSD = CompletableFuture.supplyAsync(() -> shop.getPrice(product))
                     .thenCombine(CompletableFuture.supplyAsync(() -> ExchangeService.getRate(Money.EUR, Money.USD))
                                     .completeOnTimeout(ExchangeService.DEFAULT_RATE, 1, TimeUnit.SECONDS),
                             (price, rate) -> price * rate
@@ -49,9 +49,9 @@ public class BestPriceFinder {
     }
 
     public List<String> findPricesInUSD2(String product) {
-        List<CompletableFuture<String>> priceFutures = new ArrayList<>();
+        final List<CompletableFuture<String>> priceFutures = new ArrayList<>();
         for (var shop : shops) {
-            var futurePriceInUSD = CompletableFuture.supplyAsync(() -> shop.getPrice(product))
+            final var futurePriceInUSD = CompletableFuture.supplyAsync(() -> shop.getPrice(product))
                     .thenCombine(CompletableFuture.supplyAsync(() -> ExchangeService.getRate(Money.EUR, Money.USD)),
                             (price, rate) -> price * rate
                     ).thenApply(price -> shop.getName() + " price is " + price);
@@ -64,12 +64,12 @@ public class BestPriceFinder {
     }
 
     public List<String> findPricesInUSD3(String product) {
-        var priceFuturesStream = shops.stream()
+        final var priceFuturesStream = shops.stream()
                 .map(shop -> CompletableFuture.supplyAsync(() -> shop.getPrice(product))
                         .thenCombine(CompletableFuture.supplyAsync(() -> ExchangeService.getRate(Money.EUR, Money.USD)),
                                 (price, rate) -> price * rate)
                         .thenApply(price -> shop.getName() + " price is " + price));
-        var priceFutures = priceFuturesStream.toList();
+        final var priceFutures = priceFuturesStream.toList();
         return priceFutures.stream()
                 .map(CompletableFuture::join)
                 .toList();

@@ -24,12 +24,12 @@ class ParallelProcessingTest {
     @Test
     void testSequentialSum() {
         config.number = 100L;
-        var result1 = ParallelProcessing.sequentialSum(config);
+        final var result1 = ParallelProcessing.sequentialSum(config);
         assertEquals(5050L, result1);
         log.info("Sum of Sequence: {}", result1);
 
         config.number = 10_000L;
-        var result2 = ParallelProcessing.sequentialSum(config);
+        final var result2 = ParallelProcessing.sequentialSum(config);
         assertEquals(50005000L, result2);
         log.info("Sum of Sequence: {}", result2);
     }
@@ -37,12 +37,12 @@ class ParallelProcessingTest {
     @Test
     void testParallelSum() {
         config.number = 100L;
-        var result1 = ParallelProcessing.parallelSum(config);
+        final var result1 = ParallelProcessing.parallelSum(config);
         assertEquals(5050L, result1);
         log.info("Sum of Sequence: {}", result1);
 
         config.number = 10_000L;
-        var result2 = ParallelProcessing.parallelSum(config);
+        final var result2 = ParallelProcessing.parallelSum(config);
         assertEquals(50005000L, result2);
         log.info("Sum of Sequence: {}", result2);
     }
@@ -50,12 +50,12 @@ class ParallelProcessingTest {
     @Test
     void testRangedSum() {
         config.number = 100L;
-        var result1 = ParallelProcessing.rangedSum(config);
+        final var result1 = ParallelProcessing.rangedSum(config);
         assertEquals(5050L, result1);
         log.info("Sum of Sequence: {}", result1);
 
         config.number = 10_000L;
-        var result2 = ParallelProcessing.rangedSum(config);
+        final var result2 = ParallelProcessing.rangedSum(config);
         assertEquals(50005000L, result2);
         log.info("Sum of Sequence: {}", result2);
     }
@@ -63,12 +63,12 @@ class ParallelProcessingTest {
     @Test
     void testParallelRangedSum() {
         config.number = 100L;
-        var result1 = ParallelProcessing.parallelRangedSum(config);
+        final var result1 = ParallelProcessing.parallelRangedSum(config);
         assertEquals(5050L, result1);
         log.info("Sum of Sequence: {}", result1);
 
         config.number = 10_000L;
-        var result2 = ParallelProcessing.parallelRangedSum(config);
+        final var result2 = ParallelProcessing.parallelRangedSum(config);
         assertEquals(50005000L, result2);
         log.info("Sum of Sequence: {}", result2);
     }

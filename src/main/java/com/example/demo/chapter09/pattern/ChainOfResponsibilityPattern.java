@@ -7,11 +7,11 @@ import java.util.function.UnaryOperator;
 @Slf4j
 public class ChainOfResponsibilityPattern {
     public static void main(String[] args) {
-        UnaryOperator<String> headerProcessing = (text) -> "From Raoul, Mario and Alan: " + text;
-        UnaryOperator<String> spellCheckerProcessing = (text) -> text.replaceAll("labda", "lambda");
-        var pipeline = headerProcessing.andThen(spellCheckerProcessing);
+        final UnaryOperator<String> headerProcessing = (text) -> "From Raoul, Mario and Alan: " + text;
+        final UnaryOperator<String> spellCheckerProcessing = (text) -> text.replaceAll("labda", "lambda");
+        final var pipeline = headerProcessing.andThen(spellCheckerProcessing);
 
-        var result = pipeline.apply("Aren't labdas really sexy?!!");
+        final var result = pipeline.apply("Aren't labdas really sexy?!!");
         log.info(result);
     }
 }

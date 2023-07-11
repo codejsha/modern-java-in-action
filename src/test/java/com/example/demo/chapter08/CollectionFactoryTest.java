@@ -15,7 +15,7 @@ class CollectionFactoryTest {
 
     @Test
     void testCreateList() {
-        var result = CollectionFactory.createList();
+        final var result = CollectionFactory.createList();
         assertNotNull(result);
         assertEquals(3, result.size());
         log.info("List: {}", result);
@@ -23,7 +23,7 @@ class CollectionFactoryTest {
 
     @Test
     void testCreateSet() {
-        var result = CollectionFactory.createSet();
+        final var result = CollectionFactory.createSet();
         assertNotNull(result);
         assertEquals(3, result.size());
         log.info("Set: {}", result);
@@ -31,7 +31,7 @@ class CollectionFactoryTest {
 
     @Test
     void testCreateMap() {
-        var result = CollectionFactory.createMap();
+        final var result = CollectionFactory.createMap();
         assertNotNull(result);
         assertEquals(3, result.size());
         log.info("Map: {}", result);
@@ -39,7 +39,7 @@ class CollectionFactoryTest {
 
     @Test
     void testCreateMap2() {
-        var result = CollectionFactory.createMap2();
+        final var result = CollectionFactory.createMap2();
         assertNotNull(result);
         assertEquals(3, result.size());
         log.info("Map: {}", result);
